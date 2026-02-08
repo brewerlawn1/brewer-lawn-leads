@@ -1,0 +1,545 @@
+/* ============================================
+   Brewer Lawn Designs - Dark Theme
+   Matches Wix site design
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #ffffff;
+    background: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* ---- Navigation ---- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 2rem;
+    background: #222222;
+    border-bottom: 1px solid #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #6abf69;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    background:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+/* ---- About Section ---- */
+.about {
+    background: #1a1a1a;
+    padding: 5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* ---- Services Section ---- */
+.services {
+    background: #1a1a1a;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-tag {
+    background: transparent;
+    border: 1px solid #555;
+    color: #cccccc;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.service-details {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-block {
+    padding: 3rem 2rem;
+    border-top: 1px solid #333;
+    /* Alternate blocks with landscape background images */
+}
+
+.service-block:nth-child(1) {
+    background:
+        linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
+        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80') center/cover no-repeat;
+}
+
+.service-block:nth-child(2) {
+    background:
+        linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80') center/cover no-repeat;
+}
+
+.service-block:nth-child(3) {
+    background:
+        linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
+        url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80') center/cover no-repeat;
+}
+
+.service-block h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.service-block p {
+    font-size: 0.95rem;
+    color: #bbbbbb;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ---- Testimonials Section ---- */
+.testimonials {
+    background: #1a1a1a;
+    padding: 5rem 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.reviews-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+}
+
+.google-g {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.review-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.stars {
+    color: #ff8c00;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.review-count {
+    font-size: 0.7rem;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* ---- Contact Section ---- */
+.contact {
+    background: #222222;
+    padding: 5rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-bottom-color: #6abf69;
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #222;
+    color: #fff;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    background: #ffffff;
+    color: #1a1a1a;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: #e0e0e0;
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff6b6b;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---- Footer ---- */
+footer {
+    background: #1a1a1a;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid #333;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #e1306c;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* ---- Thank You Page ---- */
+.thank-you {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: #1a1a1a;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you h1 {
+    color: #6abf69;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.thank-you p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.thank-you .btn-primary {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background: #ffffff;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+.thank-you .btn-primary:hover {
+    background: #e0e0e0;
+}
+
+/* ---- Dashboard (keep light theme for internal use) ---- */
+.dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    color: #333;
+    min-height: 100vh;
+}
+
+.dashboard h1 {
+    color: #2d6a2e;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard h2 {
+    margin: 2rem 0 1rem;
+    color: #333;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: #2d6a2e;
+}
+
+.stat-card p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.leads-table th,
+.leads-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.leads-table th {
+    background: #f4f4f4;
+    font-weight: 600;
+    color: #555;
+}
+
+.score-badge {
+    display: inline-block;
+    background: #2d6a2e;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-new { color: #2196F3; font-weight: 600; }
+.status-contacted { color: #FF9800; font-weight: 600; }
+.status-qualified { color: #4CAF50; font-weight: 600; }
+.status-won { color: #2d6a2e; font-weight: 700; }
+.status-lost { color: #999; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .logo-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 0.4rem;
+    }
+
+    .about, .services, .testimonials, .contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .service-block {
+        padding: 2rem 1rem;
+    }
+}

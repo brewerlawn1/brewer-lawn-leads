@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaping | {{ company_name }} | {{ location }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Brewer Lawn Designs" class="logo-img">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Big landscape photo -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <h1>{{ company_name }}</h1>
+            <p class="tagline">{{ tagline }}</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Our Story</h2>
+        <p>{{ story }}</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-list">
+            {% for service in services %}
+            <span class="service-tag">{{ service }}</span>
+            {% endfor %}
+        </div>
+
+        <div class="service-details">
+            <div class="service-block">
+                <h3>Garden Design</h3>
+                <p>Keep your property in tip-top shape with our Garden Design services. Our team does it all, and is ready to provide complete attention to your every need. You can count on us to make sure you're satisfied with the results.</p>
+            </div>
+            <div class="service-block">
+                <h3>Landscaping and Hardscaping</h3>
+                <p>Quality and professionalism are first when it comes to the services we provide. We work together with our customers, using our trusted knowledge to bring their ideas to life.</p>
+            </div>
+            <div class="service-block">
+                <h3>Concrete & Masonry</h3>
+                <p>Enhance your outdoor spaces with our expert concrete and masonry services. From custom pool decks to elegant driveways, we deliver quality craftsmanship and durable results that elevate your property's beauty and functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>A Reputation for Excellence</h2>
+        <div class="reviews-badge">
+            <span class="google-g">G</span>
+            <div class="review-info">
+                <span class="review-score">5.0</span>
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-count">7 REVIEWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+        <form action="/submit-lead" method="POST">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="text" id="phone" name="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <input type="text" id="address" name="address" placeholder="Property Address">
+            </div>
+            <div class="form-group">
+                <select id="subject" name="subject">
+                    <option value="" disabled selected>Select a service...</option>
+                    {% for service in services %}
+                    <option value="{{ service }}">{{ service }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>

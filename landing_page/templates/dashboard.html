@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Dashboard - {{ company_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">{{ company_name }} - Dashboard</div>
+            <a href="/">Landing Page</a>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h1>Lead Dashboard</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>{{ stats.total }}</h3>
+                <p>Total Leads</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.new }}</h3>
+                <p>New</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.contacted }}</h3>
+                <p>Contacted</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.qualified }}</h3>
+                <p>Qualified</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.won }}</h3>
+                <p>Won</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ "%.0f"|format(stats.avg_score) }}</h3>
+                <p>Avg Score</p>
+            </div>
+        </div>
+
+        <h2>All Leads</h2>
+        <table class="leads-table">
+            <thead>
+                <tr>
+                    <th>Score</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lead in leads %}
+                <tr>
+                    <td><span class="score-badge">{{ lead.score }}</span></td>
+                    <td>{{ lead.name }}</td>
+                    <td>{{ lead.email or '-' }}</td>
+                    <td>{{ lead.phone or '-' }}</td>
+                    <td>{{ lead.source }}</td>
+                    <td><span class="status-{{ lead.status }}">{{ lead.status }}</span></td>
+                    <td>{{ lead.created_at[:10] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>
