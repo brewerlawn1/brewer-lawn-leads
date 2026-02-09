@@ -5,15 +5,76 @@ Captures inbound leads via a contact/quote request form.
 """
 import sys
 import os
+import smtplib
+import threading
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from functools import wraps
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, Response
 from config import (LANDING_PAGE_HOST, LANDING_PAGE_PORT, SERVICES, COMPANY_NAME,
                      COMPANY_TAGLINE, COMPANY_LOCATION, COMPANY_STORY)
 from crm.database import add_lead, get_leads, get_stats, add_interaction
 
 app = Flask(__name__)
+
+# Email config
+NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL", "brewerlawndesigns@icloud.com")
+SMTP_USER = os.environ.get("SMTP_USER", "brewerlawndesigns@icloud.com")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
+SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.mail.me.com")
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+
+# Dashboard password
+DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "brewer2026")
+
+
+def send_lead_email(name, email, phone, address, service, message):
+    """Send email notification for new lead in background thread."""
+    if not SMTP_PASSWORD:
+        return
+    try:
+        msg = MIMEMultipart()
+        msg["From"] = SMTP_USER
+        msg["To"] = NOTIFY_EMAIL
+        msg["Subject"] = f"New Lead: {name}"
+
+        body = f"""New lead from brewerlawndesigns.org!
+
+Name: {name}
+Email: {email}
+Phone: {phone}
+Address: {address}
+Service: {service}
+Message: {message}
+
+View all leads: https://brewerlawndesigns.org/dashboard
+"""
+        msg.attach(MIMEText(body, "plain"))
+
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+            server.starttls()
+            server.login(SMTP_USER, SMTP_PASSWORD)
+            server.send_message(msg)
+    except Exception as e:
+        print(f"Email send failed: {e}")
+
+
+def check_dashboard_auth(f):
+    """Simple password protection for dashboard."""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or auth.password != DASHBOARD_PASSWORD:
+            return Response(
+                "Login required to view the dashboard.",
+                401,
+                {"WWW-Authenticate": 'Basic realm="Dashboard"'},
+            )
+        return f(*args, **kwargs)
+    return decorated
 
 
 @app.route("/")
@@ -33,7 +94,7 @@ def submit_lead():
     email = request.form.get("email", "").strip()
     phone = request.form.get("phone", "").strip()
     address = request.form.get("address", "").strip()
-    services = ", ".join(request.form.getlist("services"))
+    services = request.form.get("subject", "").strip()
     message = request.form.get("message", "").strip()
 
     if not name:
@@ -52,12 +113,20 @@ def submit_lead():
         services=services,
     )
 
+    # Send email notification in background thread
+    threading.Thread(
+        target=send_lead_email,
+        args=(name, email, phone, address, services, message),
+        daemon=True,
+    ).start()
+
     return render_template("thank_you.html",
                            company_name=COMPANY_NAME,
                            name=name)
 
 
 @app.route("/api/leads", methods=["GET"])
+@check_dashboard_auth
 def api_leads():
     """Simple API endpoint to view leads (for internal use)."""
     status = request.args.get("status")
@@ -67,12 +136,14 @@ def api_leads():
 
 
 @app.route("/api/stats", methods=["GET"])
+@check_dashboard_auth
 def api_stats():
     """API endpoint for lead statistics."""
     return jsonify(get_stats())
 
 
 @app.route("/dashboard")
+@check_dashboard_auth
 def dashboard():
     """Simple internal dashboard to view leads."""
     leads = get_leads()
