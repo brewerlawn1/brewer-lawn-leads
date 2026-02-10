@@ -6,7 +6,6 @@ Captures inbound leads via a contact/quote request form.
 import sys
 import os
 import smtplib
-import threading
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -28,8 +27,13 @@ SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
 
 
 def send_lead_email(name, email, phone, address, service, message):
-    """Send email notification for new lead in background thread."""
+    """Send email notification for new lead."""
+    sys.stderr.write(f"[EMAIL] Attempting to send lead email for {name}...\n")
+    sys.stderr.write(f"[EMAIL] SMTP_PASSWORD set: {bool(SMTP_PASSWORD)}\n")
+    sys.stderr.write(f"[EMAIL] SMTP_USER: {SMTP_USER}\n")
+    sys.stderr.write(f"[EMAIL] SMTP_HOST: {SMTP_HOST}:{SMTP_PORT}\n")
     if not SMTP_PASSWORD:
+        sys.stderr.write("[EMAIL] No SMTP_PASSWORD set, skipping email\n")
         return
     try:
         msg = MIMEMultipart()
@@ -52,8 +56,9 @@ Message: {message}
             server.starttls()
             server.login(SMTP_USER, SMTP_PASSWORD)
             server.send_message(msg)
+        sys.stderr.write(f"[EMAIL] Successfully sent lead email for {name}\n")
     except Exception as e:
-        print(f"Email send failed: {e}")
+        sys.stderr.write(f"[EMAIL] Send failed: {e}\n")
 
 
 @app.route("/")
@@ -92,12 +97,8 @@ def submit_lead():
         services=services,
     )
 
-    # Send email notification in background thread
-    threading.Thread(
-        target=send_lead_email,
-        args=(name, email, phone, address, services, message),
-        daemon=True,
-    ).start()
+    # Send email notification
+    send_lead_email(name, email, phone, address, services, message)
 
     return render_template("thank_you.html",
                            company_name=COMPANY_NAME,
