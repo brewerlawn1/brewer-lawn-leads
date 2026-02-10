@@ -57,6 +57,8 @@ SERVICES = [
     "Fall and Spring Cleanup",
     "Concrete & Masonry",
     "Garden Design",
+    "Residential Lawn Mowing",
+    "Commercial Lawn Mowing",
 ]
 
 # === Company Details (for landing page) ===
