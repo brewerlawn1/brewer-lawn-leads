@@ -6,6 +6,7 @@ Captures inbound leads via a contact/quote request form.
 import sys
 import os
 import smtplib
+import threading
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -23,7 +24,7 @@ NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL", "brewerlawndesigns@icloud.com")
 SMTP_USER = os.environ.get("SMTP_USER", "brewerlawndesigns@icloud.com")
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
 SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.mail.me.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "465"))
 
 
 def send_lead_email(name, email, phone, address, service, message):
@@ -52,8 +53,7 @@ Message: {message}
 """
         msg.attach(MIMEText(body, "plain"))
 
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
-            server.starttls()
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=10) as server:
             server.login(SMTP_USER, SMTP_PASSWORD)
             server.send_message(msg)
         sys.stderr.write(f"[EMAIL] Successfully sent lead email for {name}\n")
@@ -97,8 +97,11 @@ def submit_lead():
         services=services,
     )
 
-    # Send email notification
-    send_lead_email(name, email, phone, address, services, message)
+    # Send email notification in background thread
+    threading.Thread(
+        target=send_lead_email,
+        args=(name, email, phone, address, services, message),
+    ).start()
 
     return render_template("thank_you.html",
                            company_name=COMPANY_NAME,
