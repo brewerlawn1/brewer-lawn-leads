@@ -61,6 +61,15 @@ SERVICES = [
     "Commercial Lawn Mowing",
 ]
 
+# === SEO & Analytics ===
+COMPANY_DOMAIN = os.getenv("COMPANY_DOMAIN", "https://brewerlawndesigns.org")
+COMPANY_DESCRIPTION = (
+    "Brewer Lawn Designs offers professional landscaping, hardscaping, "
+    "lawn mowing, sod installation, and garden design in New Braunfels, TX. "
+    "Free estimates. Call today."
+)
+GA_MEASUREMENT_ID = os.getenv("GA_MEASUREMENT_ID", "")
+
 # === Company Details (for landing page) ===
 COMPANY_TAGLINE = "Expertise. Reliability. Value."
 COMPANY_LOCATION = "New Braunfels"

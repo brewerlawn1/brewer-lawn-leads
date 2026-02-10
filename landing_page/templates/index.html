@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landscaping | {{ company_name }} | {{ location }}</title>
+    <title>Landscaping & Lawn Care in New Braunfels, TX | {{ company_name }}</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ domain }}/">
+
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ company_name }} | Landscaping in New Braunfels, TX">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ domain }}/">
+    <meta property="og:image" content="{{ domain }}/static/images/logo.png">
+    <meta property="og:site_name" content="{{ company_name }}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ company_name }} | Landscaping in New Braunfels, TX">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ domain }}/static/images/logo.png">
+
+    <!-- Geo Tags (Local SEO) -->
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="New Braunfels">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="apple-touch-icon" href="/static/images/logo.png">
+
+    <!-- Styles & Fonts -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    {% if ga_id %}
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ ga_id }}');
+    </script>
+    {% endif %}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "{{ domain }}",
+      "name": "{{ company_name }}",
+      "description": "{{ description }}",
+      "url": "{{ domain }}",
+      {% if phone %}"telephone": "{{ phone }}",{% endif %}
+      "email": "brewerlawndesigns@icloud.com",
+      "image": "{{ domain }}/static/images/logo.png",
+      "logo": "{{ domain }}/static/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Braunfels",
+        "addressRegion": "TX",
+        "postalCode": "78130",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7030,
+        "longitude": -98.1245
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.7030,
+          "longitude": -98.1245
+        },
+        "geoRadius": "40000"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/brewerlawndesigns/",
+        "https://www.facebook.com/Brewerlawndesigns/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "7",
+        "bestRating": "5"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Landscaping Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscape Maintenance"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sod Installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Artificial Turf"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fall and Spring Cleanup"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete & Masonry"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garden Design"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Lawn Mowing"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Lawn Mowing"}}
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -24,6 +134,7 @@
         </nav>
     </header>
 
+    <main>
     <!-- Hero Section - Big landscape photo -->
     <section id="home" class="hero">
         <div class="hero-overlay">
@@ -94,7 +205,7 @@
         <div class="error-message">{{ error }}</div>
         {% endif %}
 
-        <form id="leadForm" action="/submit-lead" method="POST">
+        <form id="leadForm" action="/submit-lead" method="POST" aria-label="Request a free quote">
             <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
             <div class="form-group">
                 <input type="text" id="name" name="name" required placeholder="Name">
@@ -145,12 +256,20 @@
         });
         </script>
     </section>
+    </main>
 
     <!-- Floating Get a Quote Button -->
     <a href="#contact" class="floating-cta">Get a Free Quote</a>
 
     <!-- Footer -->
     <footer>
+        <div class="footer-contact">
+            {% if phone %}
+            <a href="tel:{{ phone }}" class="footer-phone">{{ phone }}</a>
+            {% endif %}
+            <a href="mailto:brewerlawndesigns@icloud.com" class="footer-email">brewerlawndesigns@icloud.com</a>
+            <span class="footer-location">New Braunfels, TX</span>
+        </div>
         <div class="social-links">
             <a href="https://www.instagram.com/brewerlawndesigns/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
@@ -164,6 +283,7 @@
             </a>
         </div>
         <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>
+        <p class="footer-location-text">{{ company_name }} | New Braunfels, TX</p>
     </footer>
 </body>
 </html>

@@ -445,6 +445,40 @@ footer p {
     letter-spacing: 0.5px;
 }
 
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-phone,
+.footer-email {
+    color: #6abf69;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-phone:hover,
+.footer-email:hover {
+    color: #8fd98e;
+}
+
+.footer-location {
+    color: #999;
+    font-size: 0.95rem;
+}
+
+.footer-location-text {
+    color: #555;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
 /* ---- Thank You Page ---- */
 .thank-you {
     text-align: center;
