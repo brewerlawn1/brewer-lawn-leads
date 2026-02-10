@@ -5,10 +5,6 @@ Captures inbound leads via a contact/quote request form.
 """
 import sys
 import os
-import json
-import threading
-import urllib.request
-import urllib.error
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
@@ -18,37 +14,6 @@ from config import (LANDING_PAGE_HOST, LANDING_PAGE_PORT, SERVICES, COMPANY_NAME
 from crm.database import add_lead
 
 app = Flask(__name__)
-
-# Web3Forms API key (free HTTPS email forwarding)
-WEB3FORMS_KEY = os.environ.get("WEB3FORMS_KEY", "ccf95b96-b6bd-416f-904a-f796ba981034")
-
-
-def send_lead_email(name, email, phone, address, service, message):
-    """Send email notification for new lead via Web3Forms API."""
-    sys.stderr.write(f"[EMAIL] Sending lead email for {name} via Web3Forms...\n")
-    try:
-        data = json.dumps({
-            "access_key": WEB3FORMS_KEY,
-            "subject": f"New Lead: {name}",
-            "from_name": "Brewer Lawn Designs Website",
-            "name": name,
-            "email": email,
-            "phone": phone,
-            "address": address,
-            "service": service,
-            "message": message,
-        }).encode("utf-8")
-
-        req = urllib.request.Request(
-            "https://api.web3forms.com/submit",
-            data=data,
-            headers={"Content-Type": "application/json", "Accept": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            result = json.loads(resp.read().decode())
-            sys.stderr.write(f"[EMAIL] Web3Forms response: {result}\n")
-    except Exception as e:
-        sys.stderr.write(f"[EMAIL] Send failed: {e}\n")
 
 
 @app.route("/")
@@ -86,12 +51,6 @@ def submit_lead():
         notes=message,
         services=services,
     )
-
-    # Send email notification in background thread
-    threading.Thread(
-        target=send_lead_email,
-        args=(name, email, phone, address, services, message),
-    ).start()
 
     return render_template("thank_you.html",
                            company_name=COMPANY_NAME,

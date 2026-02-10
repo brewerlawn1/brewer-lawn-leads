@@ -86,7 +86,8 @@
         <div class="error-message">{{ error }}</div>
         {% endif %}
 
-        <form action="/submit-lead" method="POST">
+        <form id="leadForm" action="/submit-lead" method="POST">
+            <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
             <div class="form-group">
                 <input type="text" id="name" name="name" required placeholder="Name">
             </div>
@@ -112,6 +113,29 @@
             </div>
             <button type="submit" class="btn-submit">Submit</button>
         </form>
+        <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var formData = new FormData(form);
+            // Send to Web3Forms for email notification (client-side, free plan OK)
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            }).then(function(r){ return r.json(); }).then(function(data){
+                console.log('Web3Forms:', data);
+            }).catch(function(err){ console.log('Web3Forms error:', err); });
+            // Submit to our server to save the lead, then redirect
+            fetch('/submit-lead', {
+                method: 'POST',
+                body: formData
+            }).then(function(r){ return r.text(); }).then(function(html){
+                document.open();
+                document.write(html);
+                document.close();
+            }).catch(function(err){ console.log('Server error:', err); });
+        });
+        </script>
     </section>
 
     <!-- Floating Get a Quote Button -->
