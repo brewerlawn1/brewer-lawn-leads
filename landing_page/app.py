@@ -5,10 +5,10 @@ Captures inbound leads via a contact/quote request form.
 """
 import sys
 import os
-import smtplib
+import json
 import threading
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+import urllib.request
+import urllib.error
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
@@ -19,44 +19,34 @@ from crm.database import add_lead
 
 app = Flask(__name__)
 
-# Email config
-NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL", "brewerlawndesigns@icloud.com")
-SMTP_USER = os.environ.get("SMTP_USER", "brewerlawndesigns@icloud.com")
-SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
-SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.mail.me.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "465"))
+# Web3Forms API key (free HTTPS email forwarding)
+WEB3FORMS_KEY = os.environ.get("WEB3FORMS_KEY", "ccf95b96-b6bd-416f-904a-f796ba981034")
 
 
 def send_lead_email(name, email, phone, address, service, message):
-    """Send email notification for new lead."""
-    sys.stderr.write(f"[EMAIL] Attempting to send lead email for {name}...\n")
-    sys.stderr.write(f"[EMAIL] SMTP_PASSWORD set: {bool(SMTP_PASSWORD)}\n")
-    sys.stderr.write(f"[EMAIL] SMTP_USER: {SMTP_USER}\n")
-    sys.stderr.write(f"[EMAIL] SMTP_HOST: {SMTP_HOST}:{SMTP_PORT}\n")
-    if not SMTP_PASSWORD:
-        sys.stderr.write("[EMAIL] No SMTP_PASSWORD set, skipping email\n")
-        return
+    """Send email notification for new lead via Web3Forms API."""
+    sys.stderr.write(f"[EMAIL] Sending lead email for {name} via Web3Forms...\n")
     try:
-        msg = MIMEMultipart()
-        msg["From"] = SMTP_USER
-        msg["To"] = NOTIFY_EMAIL
-        msg["Subject"] = f"New Lead: {name}"
+        data = json.dumps({
+            "access_key": WEB3FORMS_KEY,
+            "subject": f"New Lead: {name}",
+            "from_name": "Brewer Lawn Designs Website",
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "address": address,
+            "service": service,
+            "message": message,
+        }).encode("utf-8")
 
-        body = f"""New lead from brewerlawndesigns.org!
-
-Name: {name}
-Email: {email}
-Phone: {phone}
-Address: {address}
-Service: {service}
-Message: {message}
-"""
-        msg.attach(MIMEText(body, "plain"))
-
-        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=10) as server:
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            server.send_message(msg)
-        sys.stderr.write(f"[EMAIL] Successfully sent lead email for {name}\n")
+        req = urllib.request.Request(
+            "https://api.web3forms.com/submit",
+            data=data,
+            headers={"Content-Type": "application/json", "Accept": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            result = json.loads(resp.read().decode())
+            sys.stderr.write(f"[EMAIL] Web3Forms response: {result}\n")
     except Exception as e:
         sys.stderr.write(f"[EMAIL] Send failed: {e}\n")
 
