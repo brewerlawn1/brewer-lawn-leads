@@ -190,13 +190,13 @@ nav {
 .service-block:nth-child(4) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?w=1200&q=80') center/cover no-repeat;
 }
 
 .service-block:nth-child(5) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1589923188651-268a9765e432?w=1200&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&q=80') center/cover no-repeat;
 }
 
 .service-block h3 {
