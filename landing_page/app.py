@@ -92,5 +92,10 @@ def favicon():
     return app.send_static_file("images/logo.png")
 
 
+@app.route("/google9748f28534e3948e.html")
+def google_verify():
+    return "google-site-verification: google9748f28534e3948e.html"
+
+
 if __name__ == "__main__":
     app.run(host=LANDING_PAGE_HOST, port=LANDING_PAGE_PORT, debug=True)
