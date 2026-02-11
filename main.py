@@ -9,9 +9,14 @@ Usage:
     python main.py dashboard      - Open the lead dashboard (starts server)
     python main.py leads          - View all leads in the terminal
     python main.py stats          - Show lead statistics
-    python main.py email welcome  - Send welcome emails to new leads
+    python main.py email welcome   - Send welcome emails to new leads
     python main.py email follow_up - Send follow-up emails
+    python main.py email cold      - Dry-run cold outreach to scraped leads
+    python main.py email cold --send            - Send cold outreach for real
+    python main.py email cold --preview         - Preview email templates
+    python main.py email cold --category "HOA"  - Filter by category
     python main.py export         - Export leads to CSV
+    python main.py find-emails    - Scrape lead websites for email addresses
 """
 import argparse
 import sys
@@ -67,7 +72,18 @@ def cmd_stats(args):
 
 def cmd_email(args):
     from outreach.email_campaigns import run_campaign
-    run_campaign(args.campaign_type)
+    run_campaign(
+        args.campaign_type,
+        send=getattr(args, 'send', False),
+        limit=getattr(args, 'limit', 0),
+        category=getattr(args, 'category', ''),
+        preview=getattr(args, 'preview', False),
+    )
+
+
+def cmd_find_emails(args):
+    from scraper.email_finder import run_email_finder
+    run_email_finder()
 
 
 def cmd_export(args):
@@ -104,9 +120,21 @@ def main():
 
     # email
     sub = subparsers.add_parser("email", help="Run email campaigns")
-    sub.add_argument("campaign_type", choices=["welcome", "follow_up"],
+    sub.add_argument("campaign_type", choices=["welcome", "follow_up", "cold"],
                      help="Type of email campaign")
+    sub.add_argument("--send", action="store_true",
+                     help="Actually send emails (cold campaign, default is dry run)")
+    sub.add_argument("--limit", type=int, default=0,
+                     help="Max emails to send (0 = all)")
+    sub.add_argument("--category", type=str, default="",
+                     help="Filter by category (cold campaign)")
+    sub.add_argument("--preview", action="store_true",
+                     help="Preview email templates (cold campaign)")
     sub.set_defaults(func=cmd_email)
+
+    # find-emails
+    sub = subparsers.add_parser("find-emails", help="Scrape lead websites for email addresses")
+    sub.set_defaults(func=cmd_find_emails)
 
     # export
     sub = subparsers.add_parser("export", help="Export leads to CSV")
