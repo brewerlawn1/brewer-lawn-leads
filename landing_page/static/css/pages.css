@@ -1,0 +1,488 @@
+/* ============================================
+   Brewer Lawn Designs - Service & Location Pages
+   ============================================ */
+
+/* ---- Page Hero ---- */
+.page-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-hero-content {
+    padding: 2rem;
+}
+
+.page-hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom: 0.8rem;
+}
+
+.page-hero-sub {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #6abf69;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background: #5aaf59;
+    transform: translateY(-2px);
+}
+
+/* ---- Breadcrumbs ---- */
+.breadcrumbs {
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    background: #222;
+    border-bottom: 1px solid #333;
+}
+
+.breadcrumbs a {
+    color: #6abf69;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #ccc;
+}
+
+/* ---- Page Content Layout ---- */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
+}
+
+.content-main h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.content-main h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 1.5rem 0 0.8rem;
+    font-weight: 600;
+}
+
+.content-main p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.content-main ul {
+    color: #ccc;
+    margin: 1rem 0 1.5rem 1.5rem;
+    line-height: 2;
+}
+
+.content-main ul li {
+    font-weight: 300;
+}
+
+/* ---- Sidebar ---- */
+.sidebar-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    border-bottom: 1px solid #333;
+}
+
+.sidebar-links li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-links a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+    color: #6abf69;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, #2d6a2e, #1a4a1b);
+    border: none;
+    text-align: center;
+}
+
+.cta-card p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.btn-cta-small {
+    display: inline-block;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-cta-small:hover {
+    background: #e0e0e0;
+}
+
+.or-call {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #aaa !important;
+}
+
+.or-call a {
+    color: #6abf69;
+    text-decoration: none;
+}
+
+/* ---- Benefits Grid ---- */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.benefit-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.1rem;
+    color: #6abf69;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 0;
+}
+
+/* ---- Services Grid ---- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.service-link-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.service-link-card:hover {
+    border-color: #6abf69;
+    transform: translateY(-2px);
+}
+
+.service-link-card h3 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+
+.service-link-card span {
+    font-size: 0.85rem;
+    color: #6abf69;
+}
+
+/* ---- FAQ Section ---- */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-top: 1px solid #333;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.faq-item {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    font-size: 1.3rem;
+    color: #6abf69;
+    font-weight: 300;
+    transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    padding: 0 1.5rem 1.2rem;
+    color: #bbb;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ---- Page Quote Form ---- */
+.page-quote {
+    background: #222;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.page-quote h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.page-quote > p {
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.inline-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row input,
+.form-row textarea {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #fff;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+    color: #888;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-bottom-color: #6abf69;
+}
+
+.page-quote .btn-submit {
+    display: inline-block;
+    width: auto;
+    padding: 0.9rem 3rem;
+    background: #6abf69;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.page-quote .btn-submit:hover {
+    background: #5aaf59;
+}
+
+/* ---- Areas Index Page ---- */
+.areas-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.areas-intro h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.areas-intro p {
+    color: #ccc;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.area-card {
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.area-card:hover {
+    border-color: #6abf69;
+    transform: translateY(-3px);
+}
+
+.area-card h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.area-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.area-link {
+    color: #6abf69;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.areas-services {
+    border-top: 1px solid #333;
+    padding-top: 3rem;
+}
+
+.areas-services h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
