@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - {{ company_name }}</title>
+    <title>Thank You | {{ company_name }}</title>
+    <meta name="description" content="Thank you for contacting Brewer Lawn Designs. We'll get back to you within 24 hours with a free estimate.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://brewerlawndesigns.org/thank-you">
+
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="apple-touch-icon" href="/static/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,9 +22,12 @@
         <nav>
             <div class="nav-links">
                 <a href="/">Home</a>
+                <a href="/#services">Services</a>
+                <a href="/areas">Service Areas</a>
+                <a href="/#contact">Contact</a>
             </div>
             <div class="nav-logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Brewer Lawn Designs" class="logo-img">
+                <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="{{ company_name }}" class="logo-img"></a>
             </div>
         </nav>
     </header>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | {{ company_name }}</title>
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="apple-touch-icon" href="/static/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/#services">Services</a>
+                <a href="/areas">Service Areas</a>
+                <a href="/#testimonials">Reviews</a>
+                <a href="/#contact">Contact</a>
+            </div>
+            <div class="nav-logo">
+                <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="{{ company_name }}" class="logo-img"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover no-repeat;">
+        <div class="page-hero-content">
+            <h1>Page Not Found</h1>
+            <p class="page-hero-sub">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+            <a href="/" class="btn-cta">Back to Home</a>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="areas-intro">
+            <h2>Looking for Landscaping Services?</h2>
+            <p>We provide professional landscaping, hardscaping, lawn mowing, and more across the New Braunfels, TX area. Browse our services or contact us for a free estimate.</p>
+        </div>
+
+        <div class="services-grid">
+            {% for s in all_services %}
+            <a href="/services/{{ s.slug }}" class="service-link-card">
+                <h3>{{ s.name }}</h3>
+                <span>Learn more &rarr;</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div class="areas-intro" style="margin-top: 2rem;">
+            <h2>Our Service Areas</h2>
+        </div>
+        <div class="areas-grid">
+            {% for area in service_areas %}
+            <a href="/areas/{{ area.slug }}" class="area-card">
+                <h3>{{ area.name }}, TX</h3>
+                <span class="area-link">View services &rarr;</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            {% if phone %}
+            <a href="tel:{{ phone }}" class="footer-phone">{{ phone }}</a>
+            {% endif %}
+            <a href="mailto:brewerlawndesigns@icloud.com" class="footer-email">brewerlawndesigns@icloud.com</a>
+            <span class="footer-location">New Braunfels, TX</span>
+        </div>
+        <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>

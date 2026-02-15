@@ -12,14 +12,63 @@
     <meta property="og:title" content="Service Areas | {{ company_name }}">
     <meta property="og:description" content="Professional landscaping services across New Braunfels and surrounding Texas communities.">
     <meta property="og:url" content="{{ domain }}/areas">
+    <meta property="og:image" content="{{ domain }}/static/images/logo.png">
+    <meta property="og:site_name" content="{{ company_name }}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landscaping Service Areas | {{ company_name }}">
+    <meta name="twitter:description" content="Professional landscaping services across New Braunfels and surrounding Texas communities.">
+    <meta name="twitter:image" content="{{ domain }}/static/images/logo.png">
 
     <meta name="geo.region" content="US-TX">
     <meta name="google-site-verification" content="jCiSXGPF5cwoOBes6U882xJoDNyMLPnZ_JO3-rgZ3Fc" />
 
     <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="apple-touch-icon" href="/static/images/logo.png">
+
+    <!-- Font Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ company_name }}",
+      "description": "Professional landscaping, hardscaping, lawn mowing, and sod installation across New Braunfels, TX and surrounding areas.",
+      "url": "{{ domain }}",
+      "telephone": "{{ phone }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Braunfels",
+        "addressRegion": "TX",
+        "postalCode": "78130",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "New Braunfels"},
+        {"@type": "City", "name": "Schertz"},
+        {"@type": "City", "name": "Cibolo"},
+        {"@type": "City", "name": "San Marcos"},
+        {"@type": "City", "name": "Seguin"},
+        {"@type": "City", "name": "Garden Ridge"},
+        {"@type": "City", "name": "Canyon Lake"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "7",
+        "bestRating": "5"
+      }
+    }
+    </script>
 
     {% if ga_id %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
