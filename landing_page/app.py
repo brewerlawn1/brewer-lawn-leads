@@ -85,6 +85,8 @@ def service_page(slug):
         abort(404)
     ctx = common_ctx()
     ctx.update(page)
+    ctx["service_name"] = page["name"]
+    ctx.setdefault("gallery_images", [])
     return render_template("service.html", **ctx)
 
 

@@ -61,6 +61,7 @@
       "@type": "Service",
       "name": "{{ service_name }}",
       "description": "{{ meta_description }}",
+      "image": [{% for img in gallery_images %}"{{ img }}"{% if not loop.last %},{% endif %}{% endfor %}],
       "provider": {
         "@type": "LocalBusiness",
         "name": "{{ company_name }}",
@@ -92,7 +93,6 @@
     </script>
 
     {% if faqs %}
-    <!-- FAQ Schema for Featured Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -135,9 +135,24 @@
         <div class="page-hero-content">
             <h1>{{ h1 }}</h1>
             <p class="page-hero-sub">{{ tagline }}</p>
-            <a href="#quote" class="btn-cta">Get a Free Estimate</a>
+            <div class="hero-cta-group">
+                <a href="#quote" class="btn-cta">Get a Free Estimate</a>
+                {% if phone %}
+                <a href="tel:{{ phone }}" class="btn-cta btn-cta-phone">Call {{ phone }}</a>
+                {% endif %}
+            </div>
         </div>
     </section>
+
+    <!-- Phone Banner -->
+    {% if phone %}
+    <div class="phone-banner">
+        <span>Ready to get started?</span>
+        <a href="tel:{{ phone }}">Call Now: {{ phone }}</a>
+        <span class="phone-banner-sep">|</span>
+        <span>Serving New Braunfels, Schertz, Cibolo, San Marcos &amp; surrounding areas</span>
+    </div>
+    {% endif %}
 
     <!-- Breadcrumbs -->
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -153,6 +168,7 @@
                 {{ content | safe }}
 
                 {% if benefits %}
+                <h2>Why Choose {{ company_name }} for {{ service_name }} in New Braunfels?</h2>
                 <div class="benefits-grid">
                     {% for b in benefits %}
                     <div class="benefit-card">
@@ -162,9 +178,41 @@
                     {% endfor %}
                 </div>
                 {% endif %}
+
+                <!-- Photo Gallery -->
+                {% if gallery_images %}
+                <h2>{{ service_name }} Photos — New Braunfels, TX</h2>
+                <div class="photo-gallery">
+                    {% for img in gallery_images %}
+                    <div class="gallery-item">
+                        <img src="{{ img }}" alt="{{ service_name }} in New Braunfels TX - {{ company_name }} - Photo {{ loop.index }}" loading="lazy" width="400" height="300">
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <!-- Cities Served -->
+                <div class="cities-served">
+                    <h2>{{ service_name }} Available in These Texas Cities</h2>
+                    <p>{{ company_name }} provides professional {{ service_name | lower }} services throughout the New Braunfels, TX area. We proudly serve homeowners and businesses in:</p>
+                    <div class="city-tags">
+                        {% for area in service_areas %}
+                        <a href="/areas/{{ area.slug }}" class="city-tag">{{ area.name }}, TX</a>
+                        {% endfor %}
+                    </div>
+                    <p>No matter where you are in the Texas Hill Country, our {{ service_name | lower }} team is ready to help. Contact us for a free on-site estimate.</p>
+                </div>
             </div>
 
             <aside class="content-sidebar">
+                <div class="sidebar-card cta-card">
+                    <h3>Free Estimate</h3>
+                    <p>Ready to transform your outdoor space?</p>
+                    <a href="#quote" class="btn-cta-small">Get a Quote</a>
+                    {% if phone %}
+                    <p class="or-call">or call <a href="tel:{{ phone }}">{{ phone }}</a></p>
+                    {% endif %}
+                </div>
                 <div class="sidebar-card">
                     <h3>Our Services</h3>
                     <ul class="sidebar-links">
@@ -181,13 +229,17 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="sidebar-card cta-card">
-                    <h3>Free Estimate</h3>
-                    <p>Ready to transform your outdoor space?</p>
-                    <a href="#quote" class="btn-cta-small">Get a Quote</a>
-                    {% if phone %}
-                    <p class="or-call">or call <a href="tel:{{ phone }}">{{ phone }}</a></p>
-                    {% endif %}
+                <!-- Google Reviews -->
+                <div class="sidebar-card reviews-sidebar">
+                    <a href="https://share.google/rpAXUYoCaVYMuJ6p3" target="_blank" rel="noopener noreferrer">
+                        <div class="sidebar-reviews">
+                            <span class="google-g-sm">G</span>
+                            <div>
+                                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="review-text">5.0 — 7 Google Reviews</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </aside>
         </div>
@@ -196,7 +248,7 @@
     <!-- FAQ Section -->
     {% if faqs %}
     <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
+        <h2>{{ service_name }} FAQ — New Braunfels, TX</h2>
         <div class="faq-list">
             {% for faq in faqs %}
             <details class="faq-item">
@@ -208,21 +260,42 @@
     </section>
     {% endif %}
 
+    <!-- Google Map -->
+    <section class="map-section">
+        <h2>{{ service_name }} in New Braunfels &amp; Surrounding Areas</h2>
+        <p class="map-subtitle">We serve New Braunfels, Schertz, Cibolo, San Marcos, Seguin, Garden Ridge, Canyon Lake, and all surrounding communities.</p>
+        <div class="map-embed">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111105.76895413088!2d-98.19646!3d29.7030!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865cbd0e9e30037d%3A0x8a84c1afd2e9bf4c!2sNew%20Braunfels%2C%20TX!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="{{ service_name }} service area map — New Braunfels, TX and surrounding cities">
+            </iframe>
+        </div>
+    </section>
+
     <!-- CTA / Quote Form -->
     <section id="quote" class="page-quote">
-        <h2>Get a Free {{ service_name }} Estimate</h2>
-        <p>Serving New Braunfels, Schertz, Cibolo, San Marcos, and surrounding areas.</p>
+        <h2>Get a Free {{ service_name }} Estimate in New Braunfels, TX</h2>
+        <p>Serving New Braunfels, Schertz, Cibolo, San Marcos, Seguin, Garden Ridge, Canyon Lake, and all surrounding areas.</p>
+        {% if phone %}
+        <p class="quote-phone">Prefer to call? <a href="tel:{{ phone }}">{{ phone }}</a></p>
+        {% endif %}
         <form action="/submit-lead" method="POST" class="inline-form">
             <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
             <input type="hidden" name="subject" value="{{ service_name }}">
             <div class="form-row">
-                <input type="text" name="name" required placeholder="Your Name">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="name" required placeholder="Your Name" aria-label="Your name">
+                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number">
+                <input type="email" name="email" placeholder="Email" aria-label="Email address">
             </div>
             <div class="form-row">
-                <input type="text" name="address" placeholder="Property Address">
-                <textarea name="message" rows="3" placeholder="Tell us about your project..."></textarea>
+                <input type="text" name="address" placeholder="Property Address" aria-label="Property address">
+                <textarea name="message" rows="3" placeholder="Tell us about your {{ service_name | lower }} project..." aria-label="Project details"></textarea>
             </div>
             <button type="submit" class="btn-submit">Request Free Estimate</button>
         </form>
@@ -248,6 +321,7 @@
             </a>
         </div>
         <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>
+        <p class="footer-location-text">{{ company_name }} | {{ service_name }} in New Braunfels, TX</p>
     </footer>
 </body>
 </html>

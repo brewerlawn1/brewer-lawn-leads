@@ -468,6 +468,226 @@
     margin-bottom: 2rem;
 }
 
+/* ---- Hero CTA Group ---- */
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-cta-phone {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-cta-phone:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* ---- Phone Banner ---- */
+.phone-banner {
+    background: #6abf69;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.phone-banner a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.phone-banner a:hover {
+    text-decoration: underline;
+}
+
+.phone-banner-sep {
+    opacity: 0.6;
+}
+
+/* ---- Photo Gallery ---- */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ---- Cities Served Section ---- */
+.cities-served {
+    margin: 3rem 0 2rem;
+    padding: 2rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.cities-served h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 1rem;
+}
+
+.cities-served p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.2rem 0;
+}
+
+.city-tag {
+    display: inline-block;
+    background: #222;
+    border: 1px solid #444;
+    color: #6abf69;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.city-tag:hover {
+    background: #2d6a2e;
+    border-color: #6abf69;
+    color: #fff;
+}
+
+/* ---- Google Map Section ---- */
+.map-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.map-section h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.map-subtitle {
+    color: #aaa;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.map-embed {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.map-embed iframe {
+    display: block;
+}
+
+/* ---- Quote Phone ---- */
+.quote-phone {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.quote-phone a {
+    color: #6abf69;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.quote-phone a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Reviews Sidebar ---- */
+.reviews-sidebar {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.reviews-sidebar a {
+    text-decoration: none;
+}
+
+.sidebar-reviews {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.google-g-sm {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4285F4, #34A853, #FBBC05, #EA4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.review-stars {
+    display: block;
+    color: #FBBC05;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    display: block;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* ---- Footer location text ---- */
+.footer-location-text {
+    color: #555;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
     .content-wrapper {
@@ -484,5 +704,23 @@
 
     .areas-grid {
         grid-template-columns: 1fr;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .phone-banner {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .phone-banner-sep {
+        display: none;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
     }
 }
