@@ -22,7 +22,7 @@ SERVICE_PAGES = [
             "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
             "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
             "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1598902108854-d1446a07012e?w=600&q=80",
+            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
         ],
         "content": """
             <h2>Professional Landscaping in New Braunfels, TX</h2>
@@ -196,7 +196,7 @@ SERVICE_PAGES = [
         "gallery_images": [
             "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1598902108854-d1446a07012e?w=600&q=80",
+            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
             "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
         ],
         "content": """
@@ -282,7 +282,7 @@ SERVICE_PAGES = [
         "gallery_images": [
             "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
             "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1598902108854-d1446a07012e?w=600&q=80",
+            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
             "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
         ],
         "content": """
@@ -367,7 +367,7 @@ SERVICE_PAGES = [
         "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
         "gallery_images": [
             "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1598902108854-d1446a07012e?w=600&q=80",
+            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
             "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
             "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&q=80",
         ],
