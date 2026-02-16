@@ -649,3 +649,61 @@ footer p {
         font-size: 0.8rem;
     }
 }
+
+/* ---- Homepage Service Learn More Links ---- */
+.service-learn-more {
+    display: inline-block;
+    color: #6abf69;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: color 0.2s;
+}
+
+.service-learn-more:hover {
+    color: #8fd98e;
+    text-decoration: underline;
+}
+
+/* ---- All Services Grid (Homepage) ---- */
+.all-services-grid {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+.all-services-grid h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.service-links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.service-link-item {
+    display: inline-block;
+    background: #222;
+    border: 1px solid #444;
+    color: #6abf69;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.service-link-item:hover {
+    background: #2d6a2e;
+    border-color: #6abf69;
+    color: #fff;
+}

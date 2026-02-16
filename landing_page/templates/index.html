@@ -82,15 +82,15 @@
         "latitude": 29.7030,
         "longitude": -98.1245
       },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 29.7030,
-          "longitude": -98.1245
-        },
-        "geoRadius": "40000"
-      },
+      "areaServed": [
+        {"@type": "City", "name": "New Braunfels", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Canyon Lake", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Seguin", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "San Marcos", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Schertz", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Cibolo", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Garden Ridge", "containedInPlace": {"@type": "State", "name": "Texas"}}
+      ],
       "priceRange": "$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -173,22 +173,43 @@
             <div class="service-block">
                 <h3>Garden Design</h3>
                 <p>Keep your property in tip-top shape with our Garden Design services. Our team does it all, and is ready to provide complete attention to your every need. You can count on us to make sure you're satisfied with the results.</p>
+                <a href="/services/garden-design" class="service-learn-more">Learn More &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Landscaping and Hardscaping</h3>
                 <p>Quality and professionalism are first when it comes to the services we provide. We work together with our customers, using our trusted knowledge to bring their ideas to life.</p>
+                <a href="/services/landscaping" class="service-learn-more">Learn More &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Concrete & Masonry</h3>
                 <p>Enhance your outdoor spaces with our expert concrete and masonry services. From custom pool decks to elegant driveways, we deliver quality craftsmanship and durable results that elevate your property's beauty and functionality.</p>
+                <a href="/services/concrete-masonry" class="service-learn-more">Learn More &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Residential Lawn Mowing</h3>
                 <p>Keep your home looking its best with our reliable residential lawn mowing service. We provide consistent, clean cuts on a schedule that works for you — from weekly maintenance to one-time cleanups. Your neighbors will notice the difference.</p>
+                <a href="/services/lawn-mowing" class="service-learn-more">Learn More &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Commercial Lawn Mowing</h3>
                 <p>First impressions matter. Our commercial lawn mowing service keeps your business, HOA, or multi-property landscape looking professional year-round. We handle large-scale properties with the same attention to detail we bring to every job.</p>
+                <a href="/services/commercial-landscaping" class="service-learn-more">Learn More &rarr;</a>
+            </div>
+        </div>
+
+        <div class="all-services-grid">
+            <h3>Explore All Our Services</h3>
+            <div class="service-links-grid">
+                <a href="/services/landscaping" class="service-link-item">Landscaping</a>
+                <a href="/services/hardscaping" class="service-link-item">Hardscaping</a>
+                <a href="/services/lawn-mowing" class="service-link-item">Lawn Mowing</a>
+                <a href="/services/sod-installation" class="service-link-item">Sod Installation</a>
+                <a href="/services/artificial-turf" class="service-link-item">Artificial Turf</a>
+                <a href="/services/concrete-masonry" class="service-link-item">Concrete &amp; Masonry</a>
+                <a href="/services/garden-design" class="service-link-item">Garden Design</a>
+                <a href="/services/landscape-maintenance" class="service-link-item">Landscape Maintenance</a>
+                <a href="/services/spring-fall-cleanup" class="service-link-item">Spring &amp; Fall Cleanup</a>
+                <a href="/services/commercial-landscaping" class="service-link-item">Commercial Landscaping</a>
             </div>
         </div>
     </section>
@@ -270,7 +291,7 @@
     </main>
 
     <!-- Floating Get a Quote Button -->
-    <a href="#contact" class="floating-cta">Get a Free Quote</a>
+    <a href="#contact" class="floating-cta">Get a Quote</a>
 
     <!-- Footer -->
     <footer>

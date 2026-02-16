@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landscaping Service Areas in Texas | {{ company_name }}</title>
+    <title>Landscaping Blog — Tips & Guides | {{ company_name }}</title>
 
-    <meta name="description" content="Brewer Lawn Designs provides professional landscaping, hardscaping, lawn mowing, and sod installation across New Braunfels, Schertz, Cibolo, San Marcos, Seguin, Garden Ridge, and Canyon Lake, TX.">
-    <link rel="canonical" href="{{ domain }}/areas">
+    <!-- SEO Meta -->
+    <meta name="description" content="Expert landscaping tips, lawn care guides, and yard maintenance advice for New Braunfels, TX homeowners. Read the Brewer Lawn Designs blog.">
+    <link rel="canonical" href="{{ domain }}/blog">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Service Areas | {{ company_name }}">
-    <meta property="og:description" content="Professional landscaping services across New Braunfels and surrounding Texas communities.">
-    <meta property="og:url" content="{{ domain }}/areas">
+    <meta property="og:title" content="Landscaping Blog | {{ company_name }}">
+    <meta property="og:description" content="Expert landscaping tips and lawn care guides for New Braunfels, TX homeowners.">
+    <meta property="og:url" content="{{ domain }}/blog">
     <meta property="og:image" content="{{ domain }}/static/images/logo.png">
     <meta property="og:site_name" content="{{ company_name }}">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Landscaping Service Areas | {{ company_name }}">
-    <meta name="twitter:description" content="Professional landscaping services across New Braunfels and surrounding Texas communities.">
+    <meta name="twitter:title" content="Landscaping Blog | {{ company_name }}">
+    <meta name="twitter:description" content="Expert landscaping tips and lawn care guides for New Braunfels, TX homeowners.">
     <meta name="twitter:image" content="{{ domain }}/static/images/logo.png">
 
+    <!-- Geo Tags -->
     <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="New Braunfels">
+
+    <!-- Google Search Console -->
     <meta name="google-site-verification" content="jCiSXGPF5cwoOBes6U882xJoDNyMLPnZ_JO3-rgZ3Fc" />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/static/images/logo.png">
     <link rel="apple-touch-icon" href="/static/images/logo.png">
 
@@ -32,43 +39,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "{{ company_name }}",
-      "description": "Professional landscaping, hardscaping, lawn mowing, and sod installation across New Braunfels, TX and surrounding areas.",
-      "url": "{{ domain }}",
-      "telephone": "{{ phone }}",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "New Braunfels",
-        "addressRegion": "TX",
-        "postalCode": "78130",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        {"@type": "City", "name": "New Braunfels"},
-        {"@type": "City", "name": "Schertz"},
-        {"@type": "City", "name": "Cibolo"},
-        {"@type": "City", "name": "San Marcos"},
-        {"@type": "City", "name": "Seguin"},
-        {"@type": "City", "name": "Garden Ridge"},
-        {"@type": "City", "name": "Canyon Lake"}
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "7",
-        "bestRating": "5"
-      }
-    }
-    </script>
 
     {% if ga_id %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
@@ -87,7 +61,7 @@
                 <a href="/">Home</a>
                 <a href="/#services">Services</a>
                 <a href="/areas">Service Areas</a>
-                <a href="/#testimonials">Reviews</a>
+                <a href="/blog" class="active">Blog</a>
                 <a href="/#contact">Contact</a>
             </div>
             <div class="nav-logo">
@@ -97,61 +71,46 @@
     </header>
 
     <main>
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover no-repeat;">
+    <!-- Blog Hero -->
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover no-repeat;">
         <div class="page-hero-content">
-            <h1>Our Service Areas</h1>
-            <p class="page-hero-sub">Professional landscaping across the Texas Hill Country</p>
+            <h1>Landscaping Tips & Guides</h1>
+            <p class="page-hero-sub">Expert advice for New Braunfels homeowners from Brewer Lawn Designs</p>
         </div>
     </section>
 
-    <section class="page-content">
-        <div class="areas-intro">
-            <h2>Serving New Braunfels and Beyond</h2>
-            <p>Brewer Lawn Designs is proud to serve homeowners, businesses, and communities across the New Braunfels area. From lawn mowing and landscape maintenance to full hardscaping and sod installation, we bring the same quality and attention to detail to every community we serve.</p>
-        </div>
-
-        <div class="areas-grid">
-            {% for area in service_areas %}
-            <a href="/areas/{{ area.slug }}" class="area-card">
-                <h3>{{ area.name }}, TX</h3>
-                <p>{{ area.short }}</p>
-                <span class="area-link">View services &rarr;</span>
-            </a>
+    <!-- Blog Posts Grid -->
+    <section class="blog-list-section">
+        <div class="blog-grid">
+            {% for post in posts %}
+            <article class="blog-card">
+                <a href="/blog/{{ post.slug }}" class="blog-card-image" style="background-image: url('{{ post.hero_image }}');">
+                    <span class="blog-card-date">{{ post.date }}</span>
+                </a>
+                <div class="blog-card-body">
+                    <h2><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h2>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="/blog/{{ post.slug }}" class="blog-read-more">Read More &rarr;</a>
+                </div>
+            </article>
             {% endfor %}
         </div>
-
-        <div class="areas-services">
-            <h2>Services Available in All Areas</h2>
-            <div class="services-grid">
-                {% for s in all_services %}
-                <a href="/services/{{ s.slug }}" class="service-link-card">
-                    <h3>{{ s.name }}</h3>
-                    <span>Learn more &rarr;</span>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
     </section>
 
-    <section id="quote" class="page-quote">
-        <h2>Get an Estimate in Your Area</h2>
-        <form action="/submit-lead" method="POST" class="inline-form">
-            <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
-            <div class="form-row">
-                <input type="text" name="name" required placeholder="Your Name">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="email" name="email" placeholder="Email">
-            </div>
-            <div class="form-row">
-                <input type="text" name="address" placeholder="Property Address">
-                <textarea name="message" rows="3" placeholder="Tell us about your project..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Request Estimate</button>
-        </form>
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <h2>Need Professional Landscaping Help?</h2>
+        <p>Brewer Lawn Designs serves New Braunfels, Schertz, Cibolo, San Marcos, Seguin, and surrounding areas.</p>
+        <div class="hero-cta-group">
+            <a href="/#contact" class="btn-cta">Get an Estimate</a>
+            {% if phone %}
+            <a href="tel:{{ phone }}" class="btn-cta btn-cta-phone">Call {{ phone }}</a>
+            {% endif %}
+        </div>
     </section>
     </main>
 
-    <a href="#quote" class="floating-cta">Get a Quote</a>
+    <a href="/#contact" class="floating-cta">Get a Quote</a>
 
     <footer>
         <div class="footer-contact">

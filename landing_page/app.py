@@ -22,6 +22,7 @@ from landing_page.seo_content import (
     get_all_services, get_all_areas,
     SERVICE_PAGES, LOCATION_PAGES,
 )
+from landing_page.blog_content import get_all_posts, get_blog_post, BLOG_POSTS
 
 app = Flask(__name__)
 
@@ -87,6 +88,7 @@ def service_page(slug):
     ctx.update(page)
     ctx["service_name"] = page["name"]
     ctx.setdefault("gallery_images", [])
+    ctx.setdefault("gallery_alt", [])
     return render_template("service.html", **ctx)
 
 
@@ -140,6 +142,25 @@ def submit_lead():
                            name=name)
 
 
+# === Blog ===
+@app.route("/blog")
+def blog_index():
+    ctx = common_ctx()
+    ctx["posts"] = get_all_posts()
+    return render_template("blog.html", **ctx)
+
+
+@app.route("/blog/<slug>")
+def blog_post(slug):
+    post = get_blog_post(slug)
+    if not post:
+        abort(404)
+    ctx = common_ctx()
+    ctx.update(post)
+    ctx["recent_posts"] = get_all_posts()[:5]
+    return render_template("blog_post.html", **ctx)
+
+
 # === SEO Files ===
 @app.route("/robots.txt")
 def robots():
@@ -181,6 +202,17 @@ def sitemap():
         urls.append({
             "loc": f"https://brewerlawndesigns.org/areas/{a['slug']}",
             "priority": "0.8",
+            "changefreq": "monthly",
+        })
+
+    # Blog index
+    urls.append({"loc": "https://brewerlawndesigns.org/blog", "priority": "0.7", "changefreq": "weekly"})
+
+    # Blog posts
+    for p in BLOG_POSTS:
+        urls.append({
+            "loc": f"https://brewerlawndesigns.org/blog/{p['slug']}",
+            "priority": "0.6",
             "changefreq": "monthly",
         })
 

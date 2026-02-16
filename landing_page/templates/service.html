@@ -136,7 +136,7 @@
             <h1>{{ h1 }}</h1>
             <p class="page-hero-sub">{{ tagline }}</p>
             <div class="hero-cta-group">
-                <a href="#quote" class="btn-cta">Get a Free Estimate</a>
+                <a href="#quote" class="btn-cta">Get an Estimate</a>
                 {% if phone %}
                 <a href="tel:{{ phone }}" class="btn-cta btn-cta-phone">Call {{ phone }}</a>
                 {% endif %}
@@ -185,7 +185,7 @@
                 <div class="photo-gallery">
                     {% for img in gallery_images %}
                     <div class="gallery-item">
-                        <img src="{{ img }}" alt="{{ service_name }} in New Braunfels TX - {{ company_name }} - Photo {{ loop.index }}" loading="lazy" width="400" height="300">
+                        <img src="{{ img }}" alt="{% if gallery_alt and loop.index0 < gallery_alt|length %}{{ gallery_alt[loop.index0] }}{% else %}{{ service_name }} in New Braunfels TX - {{ company_name }} - Photo {{ loop.index }}{% endif %}" loading="lazy" width="400" height="300">
                     </div>
                     {% endfor %}
                 </div>
@@ -206,7 +206,7 @@
 
             <aside class="content-sidebar">
                 <div class="sidebar-card cta-card">
-                    <h3>Free Estimate</h3>
+                    <h3>Get an Estimate</h3>
                     <p>Ready to transform your outdoor space?</p>
                     <a href="#quote" class="btn-cta-small">Get a Quote</a>
                     {% if phone %}
@@ -280,7 +280,7 @@
 
     <!-- CTA / Quote Form -->
     <section id="quote" class="page-quote">
-        <h2>Get a Free {{ service_name }} Estimate in New Braunfels, TX</h2>
+        <h2>Get a {{ service_name }} Estimate in New Braunfels, TX</h2>
         <p>Serving New Braunfels, Schertz, Cibolo, San Marcos, Seguin, Garden Ridge, Canyon Lake, and all surrounding areas.</p>
         {% if phone %}
         <p class="quote-phone">Prefer to call? <a href="tel:{{ phone }}">{{ phone }}</a></p>
@@ -297,12 +297,12 @@
                 <input type="text" name="address" placeholder="Property Address" aria-label="Property address">
                 <textarea name="message" rows="3" placeholder="Tell us about your {{ service_name | lower }} project..." aria-label="Project details"></textarea>
             </div>
-            <button type="submit" class="btn-submit">Request Free Estimate</button>
+            <button type="submit" class="btn-submit">Request Estimate</button>
         </form>
     </section>
     </main>
 
-    <a href="#quote" class="floating-cta">Get a Free Quote</a>
+    <a href="#quote" class="floating-cta">Get a Quote</a>
 
     <footer>
         <div class="footer-contact">
