@@ -14,7 +14,7 @@ BLOG_POSTS = [
         "meta_description": "Discover the top 5 mulch options for New Braunfels, TX yards. Learn which mulch works best in the Texas Hill Country climate. Expert tips from Brewer Lawn Designs.",
         "date": "2026-02-10",
         "author": "Brewer Lawn Designs",
-        "hero_image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
         "excerpt": "Choosing the right mulch for your New Braunfels yard can make a huge difference in plant health, water savings, and curb appeal. Here are the top 5 options.",
         "content": """
             <p>Choosing the right mulch for your New Braunfels yard can make a huge difference in plant health, water savings, and curb appeal. With the Texas Hill Country's hot summers, rocky soil, and unpredictable rainfall, the right mulch helps retain moisture, regulate soil temperature, and suppress weeds. Here are the top 5 mulch options we recommend at Brewer Lawn Designs.</p>
@@ -45,7 +45,7 @@ BLOG_POSTS = [
         "meta_description": "Expert tips for maintaining a green Zoysia lawn in the Texas heat. Watering, mowing, and care advice from Brewer Lawn Designs in New Braunfels, TX.",
         "date": "2026-02-05",
         "author": "Brewer Lawn Designs",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "excerpt": "Zoysia grass is a great choice for Texas lawns, but keeping it green through the brutal summer heat takes the right approach. Here are our pro tips.",
         "content": """
             <p>Zoysia grass is a great choice for Texas lawns, but keeping it green through the brutal summer heat takes the right approach. At Brewer Lawn Designs, we maintain Zoysia lawns across New Braunfels and the surrounding area. Here are our professional tips for keeping your Zoysia looking its best year-round.</p>
@@ -76,7 +76,7 @@ BLOG_POSTS = [
         "meta_description": "Essential fall and spring yard cleanup tips for New Braunfels, TX homeowners. Expert seasonal maintenance advice from Brewer Lawn Designs.",
         "date": "2026-01-28",
         "author": "Brewer Lawn Designs",
-        "hero_image": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-crew-cleanup.jpg",
         "excerpt": "Seasonal cleanups are essential for keeping your New Braunfels yard healthy and beautiful. Here is what to do in spring and fall.",
         "content": """
             <p>Seasonal cleanups are essential for keeping your New Braunfels yard healthy and beautiful. The Texas Hill Country has unique seasonal challenges that require specific attention in both spring and fall. Here is your complete guide to seasonal yard cleanup from the pros at Brewer Lawn Designs.</p>

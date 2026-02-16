@@ -17,18 +17,18 @@ SERVICE_PAGES = [
         "h1": "Landscaping Services in New Braunfels",
         "meta_description": "Professional landscaping design and installation in New Braunfels, TX. Custom landscapes, flower beds, tree planting, drainage solutions. Free estimates from Brewer Lawn Designs.",
         "tagline": "Custom landscape design and installation for homes and businesses",
-        "hero_image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/mulch-red-stone-edging.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
+            "/static/images/portfolio/mulch-red-stone-edging.jpg",
+            "/static/images/portfolio/yelp-finished-1.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
+            "/static/images/portfolio/yelp-weed-pull-1.jpg",
         ],
         "gallery_alt": [
-            "Professional landscape design with native Texas plants in New Braunfels yard",
-            "Custom flower bed installation by Brewer Lawn Designs in New Braunfels TX",
-            "Lush green landscaping with trees and shrubs in Texas Hill Country",
-            "Completed residential landscape project in New Braunfels Texas",
+            "Professional landscape design with red mulch and stone edging in New Braunfels",
+            "Completed residential landscape project by Brewer Lawn Designs",
+            "Cedar mulch installation with native plants in New Braunfels TX",
+            "Garden bed maintenance and weed control in Texas Hill Country",
         ],
         "content": """
             <h2>Professional Landscaping in New Braunfels, TX</h2>
@@ -72,18 +72,18 @@ SERVICE_PAGES = [
         "h1": "Hardscaping & Outdoor Living in New Braunfels",
         "meta_description": "Brewer Lawn Designs provides patios, walkways, and hardscaping in New Braunfels, TX. Quality concrete and masonry work. Call 210-689-3036.",
         "tagline": "Patios, walkways, retaining walls, and outdoor living spaces",
-        "hero_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-mid-job-1.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+            "/static/images/portfolio/yelp-mid-job-1.jpg",
+            "/static/images/portfolio/yelp-mid-job-2.jpg",
+            "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
+            "/static/images/portfolio/yelp-finished-1.jpg",
         ],
         "gallery_alt": [
-            "Custom paver patio installation in New Braunfels TX backyard",
-            "Natural stone walkway design by Brewer Lawn Designs",
-            "Outdoor living space with retaining wall in New Braunfels",
-            "Flagstone patio and fire pit area in Texas Hill Country home",
+            "Hardscape project in progress at New Braunfels TX property",
+            "Stone and rock border installation by Brewer Lawn Designs",
+            "Professional hedge trimming and mulch bed along hardscape in New Braunfels",
+            "Completed hardscaping and landscape project in Texas Hill Country",
         ],
         "content": """
             <h2>Expert Hardscaping in New Braunfels, TX</h2>
@@ -122,18 +122,18 @@ SERVICE_PAGES = [
         "h1": "Reliable Lawn Mowing in New Braunfels",
         "meta_description": "Keep your lawn lush and healthy with Brewer Lawn Designs. Weekly mowing, edging, fertilization, and cleanup services in New Braunfels. Call 210-689-3036.",
         "tagline": "Weekly and biweekly mowing for homes and businesses",
-        "hero_image": "https://images.unsplash.com/photo-1734303023491-db8037a21f09?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+            "/static/images/portfolio/yelp-lawn-stripes.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-1.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-2.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-3.jpg",
         ],
         "gallery_alt": [
-            "Professional lawn mowing service on residential property in New Braunfels TX",
-            "Freshly mowed and edged lawn by Brewer Lawn Designs",
-            "Beautifully maintained residential lawn in New Braunfels Texas",
-            "Clean lawn mowing with crisp edging along sidewalk",
+            "Beautiful lawn mowing stripes on residential property in New Braunfels TX",
+            "Professional lawn mowing service by Brewer Lawn Designs",
+            "Freshly mowed and edged residential lawn in New Braunfels Texas",
+            "Clean lawn mowing with crisp lines in New Braunfels yard",
         ],
         "content": """
             <h2>Lawn Mowing Services in New Braunfels, TX</h2>
@@ -172,18 +172,18 @@ SERVICE_PAGES = [
         "h1": "Professional Sod Installation in New Braunfels",
         "meta_description": "Brewer Lawn Designs provides sod and turf installation in New Braunfels, TX. Fresh, healthy lawns installed quickly and professionally. Call 210-689-3036.",
         "tagline": "Instant green lawn with expert sod installation",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-mow-4.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&q=80",
+            "/static/images/portfolio/yelp-lawn-mow-4.jpg",
+            "/static/images/portfolio/yelp-lawn-stripes.jpg",
+            "/static/images/portfolio/yelp-finished-2.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-1.jpg",
         ],
         "gallery_alt": [
-            "Fresh sod installation on residential lawn in New Braunfels TX",
-            "Professional landscape with newly installed Bermuda grass sod",
-            "Green lawn with trees after sod installation by Brewer Lawn Designs",
-            "Sod laying process on New Braunfels residential property",
+            "Fresh green lawn after sod installation in New Braunfels TX",
+            "Beautiful lawn with mow stripes after professional sod install",
+            "Completed sod installation project by Brewer Lawn Designs",
+            "Lush residential lawn from sod installation in New Braunfels",
         ],
         "content": """
             <h2>Sod Installation in New Braunfels, TX</h2>
@@ -218,18 +218,18 @@ SERVICE_PAGES = [
         "h1": "Artificial Turf Installation in New Braunfels",
         "meta_description": "Professional artificial turf installation in New Braunfels, TX. Low-maintenance, drought-proof lawns, pet areas, putting greens. Free estimates from Brewer Lawn Designs.",
         "tagline": "Low-maintenance, drought-proof artificial grass solutions",
-        "hero_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-mow-3.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+            "/static/images/portfolio/yelp-lawn-mow-3.jpg",
+            "/static/images/portfolio/yelp-finished-2.jpg",
+            "/static/images/portfolio/yelp-lawn-stripes.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-1.jpg",
         ],
         "gallery_alt": [
-            "Artificial turf installation for backyard in New Braunfels TX",
-            "Low-maintenance synthetic lawn by Brewer Lawn Designs",
-            "Drought-proof artificial grass in New Braunfels residential yard",
-            "Beautiful home with professionally installed artificial turf",
+            "Green lawn installation for backyard in New Braunfels TX",
+            "Low-maintenance turf solution by Brewer Lawn Designs",
+            "Perfectly green lawn in New Braunfels residential yard",
+            "Beautiful home with professionally installed lawn in New Braunfels",
         ],
         "content": """
             <h2>Artificial Turf Installation in New Braunfels, TX</h2>
@@ -267,18 +267,18 @@ SERVICE_PAGES = [
         "h1": "Concrete & Masonry Work in New Braunfels",
         "meta_description": "Expert concrete and masonry work in New Braunfels, TX. Driveways, pool decks, sidewalks, stone walls, stamped concrete. Quality craftsmanship by Brewer Lawn Designs.",
         "tagline": "Driveways, pool decks, sidewalks, and custom stonework",
-        "hero_image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-mid-job-2.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+            "/static/images/portfolio/yelp-mid-job-2.jpg",
+            "/static/images/portfolio/yelp-mid-job-1.jpg",
+            "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
+            "/static/images/portfolio/yelp-finished-1.jpg",
         ],
         "gallery_alt": [
-            "Custom concrete driveway installation in New Braunfels TX",
-            "Decorative stamped concrete patio by Brewer Lawn Designs",
-            "Professional masonry and stone work on outdoor living space",
-            "Concrete pool deck renovation in New Braunfels Texas",
+            "Concrete and masonry work in progress in New Braunfels TX",
+            "Professional stone border and grading by Brewer Lawn Designs",
+            "Masonry curbing with trimmed hedges in New Braunfels",
+            "Completed concrete and landscape project in New Braunfels Texas",
         ],
         "content": """
             <h2>Concrete & Masonry Services in New Braunfels, TX</h2>
@@ -316,18 +316,18 @@ SERVICE_PAGES = [
         "h1": "Garden Design in New Braunfels",
         "meta_description": "Custom garden design in New Braunfels, TX. Native Texas gardens, flower gardens, vegetable gardens, pollinator gardens. Expert design by Brewer Lawn Designs.",
         "tagline": "Beautiful, sustainable garden design for Texas homes",
-        "hero_image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/mulch-red-stone-edging.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
+            "/static/images/portfolio/mulch-red-stone-edging.jpg",
+            "/static/images/portfolio/yelp-weed-pull-1.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-2.jpg",
+            "/static/images/portfolio/yelp-finished-1.jpg",
         ],
         "gallery_alt": [
-            "Custom garden design with native Texas perennials in New Braunfels",
-            "Colorful flower garden installation by Brewer Lawn Designs",
-            "Sustainable drought-tolerant garden design in Texas Hill Country",
-            "Beautiful flower bed with seasonal color in New Braunfels yard",
+            "Custom garden design with red mulch and stone border in New Braunfels",
+            "Garden bed maintenance with weed control by Brewer Lawn Designs",
+            "Cedar mulch garden bed installation in Texas Hill Country",
+            "Completed garden and landscape design in New Braunfels yard",
         ],
         "content": """
             <h2>Garden Design Services in New Braunfels, TX</h2>
@@ -365,18 +365,18 @@ SERVICE_PAGES = [
         "h1": "Landscape Maintenance Services in New Braunfels",
         "meta_description": "Complete landscape maintenance in New Braunfels, TX. Pruning, mulching, bed maintenance, seasonal cleanup, irrigation checks. Keep your property looking great with Brewer Lawn Designs.",
         "tagline": "Keep your landscape looking its best year-round",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&q=80",
-            "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+            "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
+            "/static/images/portfolio/yelp-weed-pull-2.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-3.jpg",
+            "/static/images/portfolio/yelp-weed-pull-3.jpg",
         ],
         "gallery_alt": [
-            "Regular landscape maintenance keeping yard beautiful in New Braunfels TX",
-            "Professional shrub trimming and bed maintenance by Brewer Lawn Designs",
-            "Well-maintained landscape with fresh mulch in New Braunfels",
-            "Clean flower beds after seasonal landscape maintenance",
+            "Professional hedge trimming and mulch maintenance in New Braunfels TX",
+            "Landscape bed maintenance and weed control by Brewer Lawn Designs",
+            "Fresh cedar mulch applied to landscape beds in New Braunfels",
+            "Garden bed weeding and cleanup in Texas Hill Country property",
         ],
         "content": """
             <h2>Landscape Maintenance in New Braunfels, TX</h2>
@@ -414,18 +414,18 @@ SERVICE_PAGES = [
         "h1": "Seasonal Cleanup Services in New Braunfels",
         "meta_description": "Brewer Lawn Designs offers residential and commercial yard cleanup in New Braunfels, TX. Debris removal, leaf cleanup, and seasonal prep. Call 210-689-3036.",
         "tagline": "Get your yard ready for the season",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-crew-cleanup.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=600&q=80",
+            "/static/images/portfolio/yelp-crew-cleanup.jpg",
+            "/static/images/portfolio/yelp-weed-pull-4.jpg",
+            "/static/images/portfolio/yelp-commercial-2.jpg",
+            "/static/images/portfolio/yelp-finished-2.jpg",
         ],
         "gallery_alt": [
-            "Seasonal yard cleanup with debris removal in New Braunfels TX",
-            "Professional spring cleanup and mulch refresh by Brewer Lawn Designs",
-            "Fall yard cleanup with leaf removal in New Braunfels",
-            "Clean residential yard after seasonal cleanup service",
+            "Brewer Lawn Designs crew performing seasonal yard cleanup in New Braunfels TX",
+            "Spring cleanup with weed removal by Brewer Lawn Designs",
+            "Commercial property cleanup and debris removal in New Braunfels",
+            "Clean residential yard after professional seasonal cleanup",
         ],
         "content": """
             <h2>Spring & Fall Cleanup in New Braunfels, TX</h2>
@@ -469,18 +469,18 @@ SERVICE_PAGES = [
         "h1": "Commercial Landscaping Services in New Braunfels",
         "meta_description": "Professional commercial landscaping in New Braunfels, TX. HOA maintenance, office parks, retail centers, apartment complexes. Reliable service from Brewer Lawn Designs.",
         "tagline": "Professional grounds maintenance for businesses and communities",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-commercial-1.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+            "/static/images/portfolio/yelp-commercial-1.jpg",
+            "/static/images/portfolio/yelp-commercial-2.jpg",
+            "/static/images/portfolio/yelp-commercial-lawn.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-2.jpg",
         ],
         "gallery_alt": [
-            "Commercial property landscaping maintenance in New Braunfels TX",
-            "Professional HOA common area landscaping by Brewer Lawn Designs",
-            "Well-maintained commercial building landscape in New Braunfels",
-            "Apartment complex grounds maintenance in Texas",
+            "Commercial property landscaping and cleanup in New Braunfels TX",
+            "Professional commercial grounds maintenance by Brewer Lawn Designs",
+            "Commercial lawn care service in New Braunfels Texas",
+            "Well-maintained commercial property lawn in New Braunfels",
         ],
         "content": """
             <h2>Commercial Landscaping in New Braunfels, TX</h2>
@@ -518,18 +518,18 @@ SERVICE_PAGES = [
         "h1": "Mulch & Rock Installation in New Braunfels, TX",
         "meta_description": "Enhance your yard with professional mulch and rock installation in New Braunfels, TX. Brewer Lawn Designs delivers clean, precise results. Call 210-689-3036.",
         "tagline": "Professional mulch and decorative rock installation for Texas yards",
-        "hero_image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-            "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-            "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80",
-            "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
+            "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-2.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-3.jpg",
+            "/static/images/portfolio/yelp-cedar-mulch-4.jpg",
         ],
         "gallery_alt": [
-            "Mulch installation in New Braunfels yard by Brewer Lawn Designs",
-            "Rock landscaping design in New Braunfels TX",
-            "Professional mulch bed installation in New Braunfels",
-            "Decorative rock and mulch garden bed in Texas Hill Country",
+            "Cedar mulch installation in New Braunfels yard by Brewer Lawn Designs",
+            "Professional mulch bed with plants in New Braunfels TX",
+            "Fresh cedar mulch applied around landscape beds",
+            "Mulch and rock garden bed completed in Texas Hill Country",
         ],
         "content": """
             <h2>Professional Mulch & Rock Installation in New Braunfels, TX</h2>
@@ -570,18 +570,18 @@ SERVICE_PAGES = [
         "h1": "Pressure Washing Services in New Braunfels, TX",
         "meta_description": "Brewer Lawn Designs offers professional pressure washing in New Braunfels, TX. Driveways, sidewalks, patios, and exterior cleaning. Call 210-689-3036.",
         "tagline": "Restore the look of your property with professional pressure washing",
-        "hero_image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-finished-2.jpg",
         "gallery_images": [
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80",
+            "/static/images/portfolio/yelp-finished-2.jpg",
+            "/static/images/portfolio/yelp-finished-1.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-4.jpg",
+            "/static/images/portfolio/yelp-commercial-1.jpg",
         ],
         "gallery_alt": [
-            "Pressure washing driveway in New Braunfels TX",
-            "Patio cleaning service by Brewer Lawn Designs New Braunfels",
-            "Exterior house pressure washing in New Braunfels",
-            "Professional sidewalk pressure washing in Texas",
+            "Clean property after pressure washing in New Braunfels TX",
+            "Professional property cleaning by Brewer Lawn Designs New Braunfels",
+            "Residential exterior cleaning service in New Braunfels",
+            "Commercial pressure washing and cleanup in Texas",
         ],
         "content": """
             <h2>Professional Pressure Washing in New Braunfels, TX</h2>
@@ -628,7 +628,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in New Braunfels, TX",
         "h1": "Landscaping Services in New Braunfels, TX",
         "meta_description": "Brewer Lawn Designs provides professional landscaping, hardscaping, lawn mowing, sod installation, and garden design in New Braunfels, TX. 5-star rated. Free estimates.",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Our home base. Full-service landscaping for New Braunfels homes and businesses.",
         "content": """
             <h2>Your Local Landscaping Company in New Braunfels</h2>
@@ -651,7 +651,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Schertz, TX",
         "h1": "Landscaping Services in Schertz, TX",
         "meta_description": "Professional landscaping services in Schertz, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Schertz homes and businesses. Free estimates from Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
         "short": "Full landscaping services for Schertz homes, businesses, and communities.",
         "content": """
             <h2>Landscaping Services in Schertz, TX</h2>
@@ -673,7 +673,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Cibolo, TX",
         "h1": "Landscaping Services in Cibolo, TX",
         "meta_description": "Professional landscaping in Cibolo, TX. Lawn mowing, landscape design, sod installation, hardscaping for Cibolo homes and businesses. Free estimates from Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Professional landscaping for Cibolo's growing community.",
         "content": """
             <h2>Landscaping Services in Cibolo, TX</h2>
@@ -692,7 +692,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in San Marcos, TX",
         "h1": "Landscaping Services in San Marcos, TX",
         "meta_description": "Professional landscaping in San Marcos, TX. Lawn mowing, landscape design, hardscaping, commercial landscaping. Serving San Marcos homes and businesses. Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
         "short": "Full-service landscaping for San Marcos homes and businesses.",
         "content": """
             <h2>Landscaping Services in San Marcos, TX</h2>
@@ -711,7 +711,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Seguin, TX",
         "h1": "Landscaping Services in Seguin, TX",
         "meta_description": "Professional landscaping in Seguin, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Seguin homes and businesses. Free estimates from Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Quality landscaping for Seguin homes and businesses.",
         "content": """
             <h2>Landscaping Services in Seguin, TX</h2>
@@ -730,7 +730,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Garden Ridge, TX",
         "h1": "Landscaping Services in Garden Ridge, TX",
         "meta_description": "Professional landscaping in Garden Ridge, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Garden Ridge estates and properties. Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-finished-1.jpg",
         "short": "Premium landscaping for Garden Ridge estates and properties.",
         "content": """
             <h2>Landscaping Services in Garden Ridge, TX</h2>
@@ -749,7 +749,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Canyon Lake, TX",
         "h1": "Landscaping Services in Canyon Lake, TX",
         "meta_description": "Professional landscaping in Canyon Lake, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Canyon Lake homes and vacation properties. Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Landscaping for Canyon Lake homes, cabins, and vacation properties.",
         "content": """
             <h2>Landscaping Services in Canyon Lake, TX</h2>
@@ -768,7 +768,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in Universal City, TX",
         "h1": "Landscaping Services in Universal City, TX",
         "meta_description": "Professional landscaping in Universal City, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Universal City homes and businesses. Brewer Lawn Designs.",
-        "hero_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+        "hero_image": "/static/images/portfolio/yelp-finished-1.jpg",
         "short": "Full-service landscaping for Universal City homes and businesses.",
         "content": """
             <h2>Landscaping Services in Universal City, TX</h2>

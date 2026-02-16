@@ -70,7 +70,7 @@ nav {
     min-height: 400px;
     background:
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/yelp-lawn-stripes.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,31 +172,31 @@ nav {
 .service-block:nth-child(1) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/mulch-red-stone-edging.jpg') center/cover no-repeat;
 }
 
 .service-block:nth-child(2) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/yelp-mid-job-1.jpg') center/cover no-repeat;
 }
 
 .service-block:nth-child(3) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/yelp-mid-job-2.jpg') center/cover no-repeat;
 }
 
 .service-block:nth-child(4) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1734303023491-db8037a21f09?w=1200&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/yelp-lawn-stripes.jpg') center/cover no-repeat;
 }
 
 .service-block:nth-child(5) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&q=80') center/cover no-repeat;
+        url('/static/images/portfolio/yelp-cedar-mulch-1.jpg') center/cover no-repeat;
 }
 
 .service-block h3 {
