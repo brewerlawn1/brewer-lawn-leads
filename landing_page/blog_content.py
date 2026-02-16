@@ -35,7 +35,7 @@ BLOG_POSTS = [
             <p>Decomposed granite (DG) is a versatile material that works as both mulch and a pathway surface. It compacts well, provides excellent drainage, and has a natural look that complements Texas landscapes. DG is popular for xeriscaping and low-water landscape designs in New Braunfels.</p>
 
             <h2>How to Choose the Right Mulch</h2>
-            <p>The best mulch for your yard depends on your specific needs. Consider factors like sun exposure, plant types, drainage, and maintenance preferences. At Brewer Lawn Designs, we help New Braunfels homeowners select and install the perfect mulch for their landscape. Call us at <a href="tel:2106893036">210-689-3036</a> for a free consultation.</p>
+            <p>The best mulch for your yard depends on your specific needs. Consider factors like sun exposure, plant types, drainage, and maintenance preferences. At Brewer Lawn Designs, we help New Braunfels homeowners select and install the perfect mulch for their landscape. Call us at <a href="tel:2106893036">210-689-3036</a> for a quote. We charge a small consultation fee, which is deducted from your final bill when you go with us.</p>
         """,
         "tags": ["mulch", "landscaping tips", "New Braunfels"],
     },
@@ -66,7 +66,7 @@ BLOG_POSTS = [
             <p>A healthy, thick Zoysia lawn is your best defense against weeds. Apply pre-emergent herbicide in late February before weeds germinate. For existing weeds, use a selective herbicide that is safe for Zoysia grass. Maintaining proper mowing height and fertilization keeps your Zoysia thick enough to crowd out most weeds.</p>
 
             <h2>Need Professional Lawn Care?</h2>
-            <p>Keeping a Zoysia lawn perfect takes consistent effort and expertise. Brewer Lawn Designs offers professional lawn mowing, fertilization, and maintenance services throughout New Braunfels, Schertz, Cibolo, and surrounding areas. Call <a href="tel:2106893036">210-689-3036</a> for a free lawn care estimate.</p>
+            <p>Keeping a Zoysia lawn perfect takes consistent effort and expertise. Brewer Lawn Designs offers professional lawn mowing, fertilization, and maintenance services throughout New Braunfels, Schertz, Cibolo, and surrounding areas. Call <a href="tel:2106893036">210-689-3036</a> for a lawn care quote. We charge a small consultation fee, which is deducted from your final bill when you go with us.</p>
         """,
         "tags": ["lawn care", "Zoysia", "Texas heat"],
     },

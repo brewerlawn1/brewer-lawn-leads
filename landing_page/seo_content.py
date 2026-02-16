@@ -15,7 +15,7 @@ SERVICE_PAGES = [
         "name": "Landscaping",
         "page_title": "Professional Landscaping in New Braunfels, TX",
         "h1": "Landscaping Services in New Braunfels",
-        "meta_description": "Professional landscaping design and installation in New Braunfels, TX. Custom landscapes, flower beds, tree planting, drainage solutions. Free estimates from Brewer Lawn Designs.",
+        "meta_description": "Professional landscaping design and installation in New Braunfels, TX. Custom landscapes, flower beds, tree planting, drainage solutions. Call Brewer Lawn Designs for a quote.",
         "tagline": "Custom landscape design and installation for homes and businesses",
         "hero_image": "/static/images/portfolio/mulch-red-stone-edging.jpg",
         "gallery_images": [
@@ -48,18 +48,18 @@ SERVICE_PAGES = [
             </ul>
 
             <h3>Why Choose Brewer Lawn Designs for Landscaping?</h3>
-            <p>We understand the unique challenges of landscaping in the Texas Hill Country. From the rocky limestone soil to the hot summers and unpredictable weather, our team knows which plants thrive here and how to design landscapes that look great year-round while conserving water. Every project starts with a free on-site consultation where we listen to your vision and provide a detailed estimate.</p>
+            <p>We understand the unique challenges of landscaping in the Texas Hill Country. From the rocky limestone soil to the hot summers and unpredictable weather, our team knows which plants thrive here and how to design landscapes that look great year-round while conserving water. Every project starts with an on-site consultation where we listen to your vision and provide a detailed quote. We charge a small fee for quotes, which is deducted from your final bill if you choose to move forward with us.</p>
 
             <h3>Landscaping for New Braunfels Homes and Businesses</h3>
             <p>From brand-new construction homes that need complete landscape packages to established properties looking for a refresh, we handle projects of all sizes. Our commercial landscaping clients include HOAs, apartment complexes, retail centers, and office buildings throughout Comal and Guadalupe counties.</p>
         """,
         "benefits": [
-            {"title": "Free On-Site Consultation", "text": "We visit your property, discuss your vision, and provide a detailed estimate at no cost."},
+            {"title": "On-Site Consultation", "text": "We visit your property, discuss your vision, and provide a detailed quote. The consultation fee is deducted from your final bill when you hire us."},
             {"title": "Native Plant Expertise", "text": "We know which plants thrive in the Texas Hill Country climate and rocky soil."},
             {"title": "Full-Service Installation", "text": "From design to installation to cleanup, we handle every step of the process."},
         ],
         "faqs": [
-            {"q": "How much does landscaping cost in New Braunfels?", "a": "Landscaping costs in New Braunfels vary depending on the scope of the project. Basic flower bed installation typically starts around $500, while full landscape designs for a typical residential property range from $2,000 to $10,000+. We provide free on-site estimates for every project."},
+            {"q": "How much does landscaping cost in New Braunfels?", "a": "Landscaping costs in New Braunfels vary depending on the scope of the project. Basic flower bed installation typically starts around $500, while full landscape designs for a typical residential property range from $2,000 to $10,000+. We provide on-site estimates for every project. The quote fee is deducted from your final bill when you go with us."},
             {"q": "What is the best time of year to landscape in Texas?", "a": "Fall (September through November) is the ideal time for landscaping in Central Texas. The cooler temperatures and fall rains help new plants establish roots before the summer heat. Spring (March through May) is also a good time, though you will need to water more frequently as summer approaches."},
             {"q": "Do you offer landscaping design services?", "a": "Yes, Brewer Lawn Designs offers complete landscape design services. We work with you to create a custom design that fits your property, style, and budget. Our designs consider factors like sun exposure, soil conditions, drainage, and water conservation."},
             {"q": "What plants grow best in New Braunfels?", "a": "Native and adapted plants that thrive in New Braunfels include Texas Sage, Esperanza, Lantana, Mexican Feathergrass, Live Oak, Texas Mountain Laurel, and Salvia. These plants are drought-tolerant and well-suited to the rocky limestone soil of the Texas Hill Country."},
@@ -72,17 +72,17 @@ SERVICE_PAGES = [
         "h1": "Hardscaping & Outdoor Living in New Braunfels",
         "meta_description": "Brewer Lawn Designs provides patios, walkways, and hardscaping in New Braunfels, TX. Quality concrete and masonry work. Call 210-689-3036.",
         "tagline": "Patios, walkways, retaining walls, and outdoor living spaces",
-        "hero_image": "/static/images/portfolio/yelp-mid-job-1.jpg",
+        "hero_image": "/static/images/portfolio/fb-masonry-wall-wide.jpg",
         "gallery_images": [
-            "/static/images/portfolio/yelp-mid-job-1.jpg",
-            "/static/images/portfolio/yelp-mid-job-2.jpg",
-            "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
+            "/static/images/portfolio/fb-masonry-wall-wide.jpg",
+            "/static/images/portfolio/fb-masonry-tree-ring.jpg",
+            "/static/images/portfolio/fb-masonry-block-wall.jpg",
             "/static/images/portfolio/yelp-finished-1.jpg",
         ],
         "gallery_alt": [
-            "Hardscape project in progress at New Braunfels TX property",
-            "Stone and rock border installation by Brewer Lawn Designs",
-            "Professional hedge trimming and mulch bed along hardscape in New Braunfels",
+            "Stone retaining wall and hardscape features by Brewer Lawn Designs in New Braunfels TX",
+            "Stone masonry tree ring and walkway at New Braunfels property",
+            "Block wall hardscape construction by Brewer Lawn Designs",
             "Completed hardscaping and landscape project in Texas Hill Country",
         ],
         "content": """
@@ -216,7 +216,7 @@ SERVICE_PAGES = [
         "name": "Artificial Turf",
         "page_title": "Artificial Turf Installation in New Braunfels, TX",
         "h1": "Artificial Turf Installation in New Braunfels",
-        "meta_description": "Professional artificial turf installation in New Braunfels, TX. Low-maintenance, drought-proof lawns, pet areas, putting greens. Free estimates from Brewer Lawn Designs.",
+        "meta_description": "Professional artificial turf installation in New Braunfels, TX. Low-maintenance, drought-proof lawns, pet areas, putting greens. Call Brewer Lawn Designs for a quote.",
         "tagline": "Low-maintenance, drought-proof artificial grass solutions",
         "hero_image": "/static/images/portfolio/yelp-lawn-mow-3.jpg",
         "gallery_images": [
@@ -267,18 +267,18 @@ SERVICE_PAGES = [
         "h1": "Concrete & Masonry Work in New Braunfels",
         "meta_description": "Expert concrete and masonry work in New Braunfels, TX. Driveways, pool decks, sidewalks, stone walls, stamped concrete. Quality craftsmanship by Brewer Lawn Designs.",
         "tagline": "Driveways, pool decks, sidewalks, and custom stonework",
-        "hero_image": "/static/images/portfolio/yelp-mid-job-2.jpg",
+        "hero_image": "/static/images/portfolio/fb-masonry-block-wall.jpg",
         "gallery_images": [
-            "/static/images/portfolio/yelp-mid-job-2.jpg",
-            "/static/images/portfolio/yelp-mid-job-1.jpg",
-            "/static/images/portfolio/black-mulch-hedges-trimmed.jpg",
-            "/static/images/portfolio/yelp-finished-1.jpg",
+            "/static/images/portfolio/fb-masonry-block-wall.jpg",
+            "/static/images/portfolio/fb-masonry-foundation.jpg",
+            "/static/images/portfolio/fb-concrete-curbing.jpg",
+            "/static/images/portfolio/fb-masonry-wall-wide.jpg",
         ],
         "gallery_alt": [
-            "Concrete and masonry work in progress in New Braunfels TX",
-            "Professional stone border and grading by Brewer Lawn Designs",
-            "Masonry curbing with trimmed hedges in New Braunfels",
-            "Completed concrete and landscape project in New Braunfels Texas",
+            "Stone block retaining wall construction by Brewer Lawn Designs in New Braunfels TX",
+            "Masonry foundation wall being built at residential property in New Braunfels",
+            "Concrete curbing installation along fence line in New Braunfels TX",
+            "Completed stone retaining wall and masonry tree rings by Brewer Lawn Designs",
         ],
         "content": """
             <h2>Concrete & Masonry Services in New Braunfels, TX</h2>
@@ -558,7 +558,7 @@ SERVICE_PAGES = [
             {"title": "Instant Curb Appeal", "text": "Fresh mulch and decorative rock instantly improve your property's appearance."},
         ],
         "faqs": [
-            {"q": "How much does mulch installation cost in New Braunfels?", "a": "Mulch installation in New Braunfels typically costs $45-75 per cubic yard installed, depending on the mulch type. Most residential properties need 3-8 cubic yards. Decorative rock installation ranges from $100-200 per ton installed. We provide free on-site estimates for all mulch and rock projects."},
+            {"q": "How much does mulch installation cost in New Braunfels?", "a": "Mulch installation in New Braunfels typically costs $45-75 per cubic yard installed, depending on the mulch type. Most residential properties need 3-8 cubic yards. Decorative rock installation ranges from $100-200 per ton installed. Contact us for a quote on your mulch and rock project — the quote fee is deducted from your final bill when you hire us."},
             {"q": "How often should I replace mulch in Texas?", "a": "In the Central Texas climate, mulch should be refreshed annually — typically in spring (March-April). Cedar mulch lasts longer than hardwood in the Texas heat. A 2-3 inch layer is ideal for moisture retention and weed control."},
             {"q": "What type of rock is best for Texas landscaping?", "a": "River rock, decomposed granite, and Texas limestone are popular choices for New Braunfels landscapes. River rock works well for drainage areas, while decomposed granite is great for pathways. Texas limestone blends naturally with the Hill Country environment."},
         ],
@@ -611,7 +611,7 @@ SERVICE_PAGES = [
             {"title": "Boost Curb Appeal", "text": "Clean surfaces make your entire property look newer and well-maintained."},
         ],
         "faqs": [
-            {"q": "How much does pressure washing cost in New Braunfels?", "a": "Pressure washing in New Braunfels typically costs $0.15-0.40 per square foot depending on the surface type and condition. A typical driveway cleaning runs $150-300, while a full home exterior wash ranges from $200-500. We provide free estimates for all pressure washing projects."},
+            {"q": "How much does pressure washing cost in New Braunfels?", "a": "Pressure washing in New Braunfels typically costs $0.15-0.40 per square foot depending on the surface type and condition. A typical driveway cleaning runs $150-300, while a full home exterior wash ranges from $200-500. Contact us for a pressure washing quote — the quote fee is deducted from your final bill when you hire us."},
             {"q": "How often should I pressure wash my driveway in Texas?", "a": "In Central Texas, driveways should be pressure washed 1-2 times per year. The combination of heat, humidity, and tree debris can cause rapid buildup of mold, mildew, and stains. Spring and fall are ideal times for pressure washing."},
             {"q": "Is pressure washing safe for all surfaces?", "a": "When done by professionals, yes. We adjust pressure levels for different surfaces — lower pressure for wood decks and painted surfaces, higher pressure for concrete and stone. We also use appropriate cleaning solutions for each surface type to ensure safe, effective results."},
         ],
@@ -627,7 +627,7 @@ LOCATION_PAGES = [
         "name": "New Braunfels",
         "page_title": "Landscaping in New Braunfels, TX",
         "h1": "Landscaping Services in New Braunfels, TX",
-        "meta_description": "Brewer Lawn Designs provides professional landscaping, hardscaping, lawn mowing, sod installation, and garden design in New Braunfels, TX. 5-star rated. Free estimates.",
+        "meta_description": "Brewer Lawn Designs provides professional landscaping, hardscaping, lawn mowing, sod installation, and garden design in New Braunfels, TX. 5-star rated. Call for a quote.",
         "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Our home base. Full-service landscaping for New Braunfels homes and businesses.",
         "content": """
@@ -638,11 +638,11 @@ LOCATION_PAGES = [
             <p>We serve homeowners across New Braunfels, including neighborhoods like Vintage Oaks, River Chase, Gruene, Mission Hills, Landa Park area, Westpointe, and all surrounding communities. Whether you need weekly mowing, a complete landscape renovation, or anything in between, we are your local go-to landscaper.</p>
 
             <h3>Why New Braunfels Homeowners Choose Us</h3>
-            <p>With a 5.0-star Google rating and 7 reviews, our reputation speaks for itself. We are locally owned, fully insured, and committed to delivering quality work at fair prices. Every project starts with a free on-site estimate and a conversation about your goals for your outdoor space.</p>
+            <p>With a 5.0-star Google rating and 7 reviews, our reputation speaks for itself. We are locally owned, fully insured, and committed to delivering quality work at fair prices. Every project starts with an on-site consultation and a conversation about your goals for your outdoor space. We charge a small fee for quotes, which is deducted from your final bill when you go with us.</p>
         """,
         "faqs": [
             {"q": "What landscaping services are available in New Braunfels?", "a": "Brewer Lawn Designs offers a complete range of landscaping services in New Braunfels including landscape design and installation, hardscaping (patios, walkways, retaining walls), lawn mowing, sod installation, artificial turf, concrete and masonry, garden design, and seasonal cleanup. We serve both residential and commercial properties."},
-            {"q": "How much does lawn care cost in New Braunfels?", "a": "Lawn care costs in New Braunfels vary by service type. Weekly mowing typically runs $35-65 per visit for residential properties. Monthly landscape maintenance ranges from $150-500. Full landscape design and installation projects start around $2,000 and go up based on scope. We provide free estimates for all services."},
+            {"q": "How much does lawn care cost in New Braunfels?", "a": "Lawn care costs in New Braunfels vary by service type. Weekly mowing typically runs $35-65 per visit for residential properties. Monthly landscape maintenance ranges from $150-500. Full landscape design and installation projects start around $2,000 and go up based on scope. Contact us for a quote — the quote fee is deducted from your final bill when you hire us."},
         ],
     },
     {
@@ -650,7 +650,7 @@ LOCATION_PAGES = [
         "name": "Schertz",
         "page_title": "Landscaping in Schertz, TX",
         "h1": "Landscaping Services in Schertz, TX",
-        "meta_description": "Professional landscaping services in Schertz, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Schertz homes and businesses. Free estimates from Brewer Lawn Designs.",
+        "meta_description": "Professional landscaping services in Schertz, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Schertz homes and businesses. Call Brewer Lawn Designs for a quote.",
         "hero_image": "/static/images/portfolio/yelp-cedar-mulch-1.jpg",
         "short": "Full landscaping services for Schertz homes, businesses, and communities.",
         "content": """
@@ -672,7 +672,7 @@ LOCATION_PAGES = [
         "name": "Cibolo",
         "page_title": "Landscaping in Cibolo, TX",
         "h1": "Landscaping Services in Cibolo, TX",
-        "meta_description": "Professional landscaping in Cibolo, TX. Lawn mowing, landscape design, sod installation, hardscaping for Cibolo homes and businesses. Free estimates from Brewer Lawn Designs.",
+        "meta_description": "Professional landscaping in Cibolo, TX. Lawn mowing, landscape design, sod installation, hardscaping for Cibolo homes and businesses. Call Brewer Lawn Designs for a quote.",
         "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Professional landscaping for Cibolo's growing community.",
         "content": """
@@ -710,7 +710,7 @@ LOCATION_PAGES = [
         "name": "Seguin",
         "page_title": "Landscaping in Seguin, TX",
         "h1": "Landscaping Services in Seguin, TX",
-        "meta_description": "Professional landscaping in Seguin, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Seguin homes and businesses. Free estimates from Brewer Lawn Designs.",
+        "meta_description": "Professional landscaping in Seguin, TX. Lawn mowing, landscape design, hardscaping, sod installation. Serving Seguin homes and businesses. Call Brewer Lawn Designs for a quote.",
         "hero_image": "/static/images/portfolio/yelp-lawn-stripes.jpg",
         "short": "Quality landscaping for Seguin homes and businesses.",
         "content": """

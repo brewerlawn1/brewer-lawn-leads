@@ -267,7 +267,7 @@ def llms_txt():
 ## Why Choose Brewer Lawn Designs
 
 - 5-star Google rating with verified reviews
-- Free on-site estimates for all services
+- On-site consultations available (quote fee is deducted from your final bill when you hire us)
 - Locally owned and operated in New Braunfels, TX
 - Residential and commercial landscaping
 - Full-service: design, installation, and maintenance
@@ -276,7 +276,7 @@ def llms_txt():
 
 ## Contact
 
-For a free landscaping estimate, visit https://brewerlawndesigns.org/#contact or call {COMPANY_PHONE}.
+For a landscaping quote, visit https://brewerlawndesigns.org/#contact or call {COMPANY_PHONE}. We charge a small consultation fee, which is deducted from your final bill when you hire us.
 
 ## Social Media
 
@@ -318,8 +318,8 @@ def llms_full_txt():
     sections.append("## Frequently Asked Questions\n")
     sections.append("Q: What areas does Brewer Lawn Designs serve?")
     sections.append("A: We serve New Braunfels, Schertz, Cibolo, San Marcos, Seguin, Garden Ridge, Canyon Lake, and surrounding Texas Hill Country communities.\n")
-    sections.append("Q: Does Brewer Lawn Designs offer free estimates?")
-    sections.append("A: Yes, we offer free on-site estimates for all landscaping services. Contact us at (210) 689-3036 or through our website.\n")
+    sections.append("Q: How does Brewer Lawn Designs handle quotes?")
+    sections.append("A: We provide on-site consultations for all landscaping services. We charge a small quote fee, which is deducted from your final bill when you hire us. Contact us at (210) 689-3036 or through our website.\n")
     sections.append("Q: What is Brewer Lawn Designs' Google rating?")
     sections.append("A: Brewer Lawn Designs has a 5.0-star rating on Google with 7 verified reviews.\n")
     sections.append("Q: Does Brewer Lawn Designs do commercial landscaping?")
