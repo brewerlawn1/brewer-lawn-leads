@@ -170,14 +170,10 @@ SERVICE_PAGES = [
         "tagline": "Instant green lawn with expert sod installation",
         "hero_image": "/static/images/portfolio/fb-sod-front-yard-stepping.jpg",
         "gallery_images": [
-            "/static/images/portfolio/fb-sod-stepping-path.jpg",
             "/static/images/portfolio/fb-backyard-sod-riverrock.jpg",
-            "/static/images/portfolio/fb-backyard-sod-gardens.jpg",
         ],
         "gallery_alt": [
-            "Fresh sod with flagstone stepping path at New Braunfels home — Brewer Lawn Designs",
             "Backyard sod installation with river rock bed and tree rings in New Braunfels TX",
-            "Backyard sod installation with garden beds and landscape lighting in New Braunfels TX",
         ],
         "content": """
             <h2>Sod Installation in New Braunfels, TX</h2>
@@ -590,7 +586,7 @@ LOCATION_PAGES = [
         "page_title": "Landscaping in New Braunfels, TX",
         "h1": "Landscaping Services in New Braunfels, TX",
         "meta_description": "Brewer Lawn Designs provides professional landscaping, hardscaping, lawn mowing, sod installation, and garden design in New Braunfels, TX. 5-star rated. Call for a quote.",
-        "hero_image": "/static/images/portfolio/fb-sod-stepping-path.jpg",
+        "hero_image": "/static/images/portfolio/yelp-finished-1.jpg",
         "short": "Our home base. Full-service landscaping for New Braunfels homes and businesses.",
         "content": """
             <h2>Your Local Landscaping Company in New Braunfels</h2>
