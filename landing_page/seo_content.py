@@ -259,11 +259,13 @@ SERVICE_PAGES = [
         "tagline": "Driveways, pool decks, sidewalks, and custom stonework",
         "hero_image": "/static/images/portfolio/fb-pool-kooldeck-grass.jpg",
         "gallery_images": [
+            "/static/images/portfolio/fb-pool-kooldeck-grass.jpg",
             "/static/images/portfolio/fb-masonry-block-wall.jpg",
             "/static/images/portfolio/fb-masonry-foundation.jpg",
             "/static/images/portfolio/fb-concrete-curbing.jpg",
         ],
         "gallery_alt": [
+            "Blue Kool Deck pool resurfacing with stone waterfall at New Braunfels property — Brewer Lawn Designs",
             "Masonry block wall construction at residential property in New Braunfels TX",
             "Masonry foundation wall being built at residential property in New Braunfels TX",
             "Concrete curbing installation along fence line in New Braunfels TX",
