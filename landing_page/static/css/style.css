@@ -255,7 +255,7 @@ nav {
 .service-block:nth-child(3) {
     background:
         linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
-        url('/static/images/portfolio/fb-pool-kooldeck-grass.jpg?v=2') center/cover no-repeat;
+        url('/static/images/portfolio/fb-blue-kooldeck.jpg?v=1') center/cover no-repeat;
 }
 
 .service-block:nth-child(4) {

@@ -257,9 +257,9 @@ SERVICE_PAGES = [
         "h1": "Concrete & Masonry Work in New Braunfels",
         "meta_description": "Expert concrete and masonry work in New Braunfels, TX. Driveways, pool decks, sidewalks, stone walls, stamped concrete. Quality craftsmanship by Brewer Lawn Designs.",
         "tagline": "Driveways, pool decks, sidewalks, and custom stonework",
-        "hero_image": "/static/images/portfolio/fb-pool-kooldeck-grass.jpg",
+        "hero_image": "/static/images/portfolio/fb-blue-kooldeck.jpg",
         "gallery_images": [
-            "/static/images/portfolio/fb-pool-kooldeck-grass.jpg",
+            "/static/images/portfolio/fb-blue-kooldeck.jpg",
             "/static/images/portfolio/fb-masonry-block-wall.jpg",
             "/static/images/portfolio/fb-masonry-foundation.jpg",
             "/static/images/portfolio/fb-concrete-curbing.jpg",
