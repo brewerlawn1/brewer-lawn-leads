@@ -29,12 +29,13 @@ Hi {name},
 Thank you for your interest in {company}!
 
 We received your request and wanted to follow up personally. We'd love to learn
-more about your landscaping needs and provide you with a free estimate.
+more about your landscaping needs and provide you with a detailed estimate.
 
 Our services include:
 {services_list}
 
-Would you like to schedule a free on-site consultation? Just reply to this email
+Would you like to schedule an on-site consultation? We charge a small quote fee,
+which is deducted from your final bill when you hire us. Just reply to this email
 or give us a call and we'll find a time that works for you.
 
 Best regards,
@@ -50,8 +51,9 @@ for your property.
 Spring is a great time to get started on lawn care, garden design, or any outdoor
 improvements you've been thinking about.
 
-We'd be happy to come out for a free estimate at your convenience. Just reply to
-this email or give us a call.
+We'd be happy to come out for an on-site consultation at your convenience. We
+charge a small quote fee, which is deducted from your final bill when you hire us.
+Just reply to this email or give us a call.
 
 Looking forward to hearing from you!
 
@@ -89,7 +91,7 @@ A few things that set us apart:
   - Volume pricing for multiple properties
   - Fast turnaround on tenant move-out cleanups
 
-Would it make sense to chat about your current landscaping needs? I'm happy to swing by one of your properties for a free walkthrough and estimate.
+Would it make sense to chat about your current landscaping needs? I'm happy to swing by one of your properties for a walkthrough and put together a detailed estimate.
 
 Best,
 Andrew Brewer
@@ -176,7 +178,7 @@ For commercial properties, we offer:
   - Irrigation management
   - Snow/ice removal (when needed)
 
-We'd welcome the opportunity to provide a competitive bid on your property's landscaping needs. Happy to do a free walkthrough and put together a proposal.
+We'd welcome the opportunity to provide a competitive bid on your property's landscaping needs. Happy to do a walkthrough and put together a detailed proposal.
 
 Would a brief call work to discuss your needs?
 
@@ -199,7 +201,7 @@ I came across {business} and wanted to introduce ourselves. We offer a full rang
   - Sod and artificial turf installation
   - Seasonal cleanup
 
-We'd love the chance to earn your business. Would you be open to a quick conversation about your landscaping needs? Free estimates, always.
+We'd love the chance to earn your business. Would you be open to a quick conversation about your landscaping needs? We'd love the chance to earn your business.
 
 Best,
 Andrew Brewer

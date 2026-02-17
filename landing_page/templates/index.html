@@ -44,7 +44,7 @@
 
     <!-- Styles & Fonts -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     {% if ga_id %}
     <!-- Google Analytics (GA4) -->
@@ -61,7 +61,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "LandscapingBusiness",
       "@id": "{{ domain }}",
       "name": "{{ company_name }}",
       "description": "{{ description }}",
@@ -84,12 +84,13 @@
       },
       "areaServed": [
         {"@type": "City", "name": "New Braunfels", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Canyon Lake", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Seguin", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "San Marcos", "containedInPlace": {"@type": "State", "name": "Texas"}},
         {"@type": "City", "name": "Schertz", "containedInPlace": {"@type": "State", "name": "Texas"}},
         {"@type": "City", "name": "Cibolo", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Garden Ridge", "containedInPlace": {"@type": "State", "name": "Texas"}}
+        {"@type": "City", "name": "San Marcos", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Seguin", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Garden Ridge", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Canyon Lake", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Universal City", "containedInPlace": {"@type": "State", "name": "Texas"}}
       ],
       "priceRange": "$$",
       "openingHoursSpecification": {
@@ -100,7 +101,8 @@
       },
       "sameAs": [
         "https://www.instagram.com/brewerlawndesigns/",
-        "https://www.facebook.com/Brewerlawndesigns/"
+        "https://www.facebook.com/Brewerlawndesigns/",
+        "https://www.yelp.com/biz/brewer-lawn-designs-new-braunfels"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -112,25 +114,30 @@
         "@type": "OfferCatalog",
         "name": "Landscaping Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscape Maintenance"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sod Installation"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Artificial Turf"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fall and Spring Cleanup"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete & Masonry"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garden Design"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Lawn Mowing"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Lawn Mowing"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping", "url": "{{ domain }}/services/landscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping", "url": "{{ domain }}/services/hardscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Mowing", "url": "{{ domain }}/services/lawn-mowing"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sod Installation", "url": "{{ domain }}/services/sod-installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Artificial Turf", "url": "{{ domain }}/services/artificial-turf"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete & Masonry", "url": "{{ domain }}/services/concrete-masonry"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garden Design", "url": "{{ domain }}/services/garden-design"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscape Maintenance", "url": "{{ domain }}/services/landscape-maintenance"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Spring & Fall Cleanup", "url": "{{ domain }}/services/spring-fall-cleanup"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Landscaping", "url": "{{ domain }}/services/commercial-landscaping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mulch & Rock Installation", "url": "{{ domain }}/services/mulch-rock-installation"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pressure Washing", "url": "{{ domain }}/services/pressure-washing"}}
         ]
       }
     }
     </script>
 </head>
 <body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
     <!-- Navigation -->
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="#about">About</a>
@@ -141,17 +148,23 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="nav-logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Brewer Lawn Designs" class="logo-img">
+                <a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="{{ company_name }} — Home" class="logo-img"></a>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
     <!-- Hero Section - Big landscape photo -->
     <section id="home" class="hero">
         <div class="hero-overlay">
-            <h1>{{ company_name }}</h1>
+            <h1>Professional Landscaping &amp; Lawn Care in New Braunfels, TX</h1>
             <p class="tagline">{{ tagline }}</p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn-cta">Get an Estimate</a>
+                {% if phone %}
+                <a href="tel:{{ phone }}" class="btn-cta btn-cta-phone">Call {{ phone }}</a>
+                {% endif %}
+            </div>
         </div>
     </section>
 
@@ -173,28 +186,28 @@
         <div class="service-details">
             <div class="service-block">
                 <h3>Garden Design</h3>
-                <p>Keep your property in tip-top shape with our Garden Design services. Our team does it all, and is ready to provide complete attention to your every need. You can count on us to make sure you're satisfied with the results.</p>
-                <a href="/services/garden-design" class="service-learn-more">Learn More &rarr;</a>
+                <p>Transform your outdoor space with custom garden designs built for the Texas Hill Country climate. We select drought-tolerant native plants, design seasonal color rotations, and create gardens that thrive in our rocky limestone soil — all tailored to your property and style.</p>
+                <a href="/services/garden-design" class="service-learn-more">Explore Garden Design &rarr;</a>
             </div>
             <div class="service-block">
-                <h3>Landscaping and Hardscaping</h3>
-                <p>Quality and professionalism are first when it comes to the services we provide. We work together with our customers, using our trusted knowledge to bring their ideas to life.</p>
-                <a href="/services/landscaping" class="service-learn-more">Learn More &rarr;</a>
+                <h3>Landscaping &amp; Hardscaping</h3>
+                <p>From complete landscape makeovers to stone patios, retaining walls, and walkways, we handle every aspect of your outdoor transformation. Our team designs and builds custom landscapes that increase property value and create the outdoor living space you've always wanted.</p>
+                <a href="/services/landscaping" class="service-learn-more">Explore Landscaping &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Concrete & Masonry</h3>
                 <p>Enhance your outdoor spaces with our expert concrete and masonry services. From custom pool decks to elegant driveways, we deliver quality craftsmanship and durable results that elevate your property's beauty and functionality.</p>
-                <a href="/services/concrete-masonry" class="service-learn-more">Learn More &rarr;</a>
+                <a href="/services/concrete-masonry" class="service-learn-more">Explore Concrete &amp; Masonry &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Residential Lawn Mowing</h3>
-                <p>Keep your home looking its best with our reliable residential lawn mowing service. We provide consistent, clean cuts on a schedule that works for you — from weekly maintenance to one-time cleanups. Your neighbors will notice the difference.</p>
-                <a href="/services/lawn-mowing" class="service-learn-more">Learn More &rarr;</a>
+                <p>Keep your home looking its best with our reliable residential lawn mowing service. We provide consistent, clean cuts on a schedule that works for you — from weekly maintenance to one-time cleanups. Most residential lawns start at $35-50 per mow.</p>
+                <a href="/services/lawn-mowing" class="service-learn-more">Explore Lawn Mowing &rarr;</a>
             </div>
             <div class="service-block">
                 <h3>Commercial Lawn Mowing</h3>
                 <p>First impressions matter. Our commercial lawn mowing service keeps your business, HOA, or multi-property landscape looking professional year-round. We handle large-scale properties with the same attention to detail we bring to every job.</p>
-                <a href="/services/commercial-landscaping" class="service-learn-more">Learn More &rarr;</a>
+                <a href="/services/commercial-landscaping" class="service-learn-more">Explore Commercial Services &rarr;</a>
             </div>
         </div>
 
@@ -243,19 +256,24 @@
         <form id="leadForm" action="/submit-lead" method="POST" aria-label="Request a quote">
             <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
             <div class="form-group">
-                <input type="text" id="name" name="name" required placeholder="Name">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Name" aria-label="Your name">
             </div>
             <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" aria-label="Email address">
             </div>
             <div class="form-group">
-                <input type="text" id="phone" name="phone" placeholder="Phone">
+                <label for="phone" class="sr-only">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" aria-label="Phone number">
             </div>
             <div class="form-group">
-                <input type="text" id="address" name="address" placeholder="Property Address">
+                <label for="address" class="sr-only">Property Address</label>
+                <input type="text" id="address" name="address" placeholder="Property Address" aria-label="Property address">
             </div>
             <div class="form-group">
-                <select id="subject" name="subject">
+                <label for="subject" class="sr-only">Service Needed</label>
+                <select id="subject" name="subject" aria-label="Select a service">
                     <option value="" disabled selected>Select a service...</option>
                     {% for service in services %}
                     <option value="{{ service }}">{{ service }}</option>
@@ -263,9 +281,10 @@
                 </select>
             </div>
             <div class="form-group">
-                <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." aria-label="Project details"></textarea>
             </div>
-            <button type="submit" class="btn-submit">Submit</button>
+            <button type="submit" class="btn-submit">Request a Quote</button>
         </form>
         <script>
         document.getElementById('leadForm').addEventListener('submit', function(e) {

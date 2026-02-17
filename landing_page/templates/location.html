@@ -42,7 +42,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     {% if ga_id %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
@@ -108,8 +108,9 @@
     {% endif %}
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/#services">Services</a>
@@ -124,7 +125,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
     <!-- Location Hero -->
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ hero_image }}') center/cover no-repeat;">
         <div class="page-hero-content">
@@ -218,17 +219,17 @@
     <section id="quote" class="page-quote">
         <h2>Get a Landscaping Estimate in {{ city_name }}</h2>
         <p>Brewer Lawn Designs proudly serves {{ city_name }}, TX and surrounding communities.</p>
-        <form action="/submit-lead" method="POST" class="inline-form">
+        <form action="/submit-lead" method="POST" class="inline-form" aria-label="Request a landscaping estimate in {{ city_name }}">
             <input type="hidden" name="access_key" value="ccf95b96-b6bd-416f-904a-f796ba981034">
             <input type="hidden" name="subject" value="Landscaping in {{ city_name }}">
             <div class="form-row">
-                <input type="text" name="name" required placeholder="Your Name">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="name" required placeholder="Your Name" aria-label="Your name">
+                <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number">
+                <input type="email" name="email" placeholder="Email" aria-label="Email address">
             </div>
             <div class="form-row">
-                <input type="text" name="address" placeholder="Property Address in {{ city_name }}">
-                <textarea name="message" rows="3" placeholder="Tell us about your project..."></textarea>
+                <input type="text" name="address" placeholder="Property Address in {{ city_name }}" aria-label="Property address">
+                <textarea name="message" rows="3" placeholder="Tell us about your project..." aria-label="Project details"></textarea>
             </div>
             <button type="submit" class="btn-submit">Request Estimate</button>
         </form>

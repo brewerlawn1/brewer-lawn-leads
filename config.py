@@ -51,14 +51,16 @@ SCRAPER_KEYWORDS = [
 SERVICES = [
     "Landscaping",
     "Hardscaping",
-    "Landscape Maintenance",
-    "Sod",
+    "Lawn Mowing",
+    "Sod Installation",
     "Artificial Turf",
-    "Fall and Spring Cleanup",
     "Concrete & Masonry",
     "Garden Design",
-    "Residential Lawn Mowing",
-    "Commercial Lawn Mowing",
+    "Landscape Maintenance",
+    "Spring & Fall Cleanup",
+    "Commercial Landscaping",
+    "Mulch & Rock Installation",
+    "Pressure Washing",
 ]
 
 # === SEO & Analytics ===
@@ -66,7 +68,7 @@ COMPANY_DOMAIN = os.getenv("COMPANY_DOMAIN", "https://brewerlawndesigns.org")
 COMPANY_DESCRIPTION = (
     "Brewer Lawn Designs offers professional landscaping, hardscaping, "
     "lawn mowing, sod installation, and garden design in New Braunfels, TX. "
-    "Free estimates. Call today."
+    "5-star rated. Call (210) 689-3036 for a quote today."
 )
 GA_MEASUREMENT_ID = os.getenv("GA_MEASUREMENT_ID", "")
 

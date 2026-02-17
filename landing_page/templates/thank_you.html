@@ -15,11 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/#services">Services</a>
@@ -32,12 +33,14 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <section class="thank-you">
         <h1>Thank You, {{ name }}!</h1>
         <p>We've received your request and will get back to you within 24 hours.</p>
         <p>In the meantime, feel free to give us a call if you have any questions.</p>
         <a href="/" class="btn-primary">Back to Home</a>
     </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 {{ company_name }}. All rights reserved.</p>

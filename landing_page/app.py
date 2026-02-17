@@ -10,7 +10,7 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-import json
+import logging
 from flask import Flask, render_template, request, abort, jsonify
 from config import (LANDING_PAGE_HOST, LANDING_PAGE_PORT, SERVICES, COMPANY_NAME,
                      COMPANY_TAGLINE, COMPANY_LOCATION, COMPANY_STORY,
@@ -25,13 +25,26 @@ from landing_page.seo_content import (
 from landing_page.blog_content import get_all_posts, get_blog_post, BLOG_POSTS
 
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY", os.urandom(32))
 
 
-# === 404 Handler ===
+# === Error Handlers ===
 @app.errorhandler(404)
 def page_not_found(e):
     ctx = common_ctx()
     return render_template("404.html", **ctx), 404
+
+
+@app.errorhandler(500)
+def internal_error(e):
+    logging.error(f"500 error: {e}")
+    return render_template("404.html",
+                           company_name=COMPANY_NAME,
+                           phone=COMPANY_PHONE,
+                           domain=COMPANY_DOMAIN,
+                           ga_id=GA_MEASUREMENT_ID,
+                           all_services=get_all_services(),
+                           service_areas=get_all_areas()), 500
 
 
 # === Caching & Performance Headers ===
@@ -46,6 +59,8 @@ def add_performance_headers(response):
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "SAMEORIGIN"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
     return response
 
 
@@ -65,17 +80,16 @@ def common_ctx():
 # === Homepage ===
 @app.route("/")
 def home():
-    return render_template("index.html",
-                           company_name=COMPANY_NAME,
-                           services=SERVICES,
-                           tagline=COMPANY_TAGLINE,
-                           location=COMPANY_LOCATION,
-                           story=COMPANY_STORY,
-                           phone=COMPANY_PHONE,
-                           email=COMPANY_EMAIL,
-                           domain=COMPANY_DOMAIN,
-                           description=COMPANY_DESCRIPTION,
-                           ga_id=GA_MEASUREMENT_ID)
+    ctx = common_ctx()
+    ctx.update({
+        "services": SERVICES,
+        "tagline": COMPANY_TAGLINE,
+        "location": COMPANY_LOCATION,
+        "story": COMPANY_STORY,
+        "email": COMPANY_EMAIL,
+        "description": COMPANY_DESCRIPTION,
+    })
+    return render_template("index.html", **ctx)
 
 
 # === Service Pages ===
@@ -114,32 +128,45 @@ def location_page(slug):
 @app.route("/submit-lead", methods=["POST"])
 def submit_lead():
     """Handle form submission from the landing page."""
-    name = request.form.get("name", "").strip()
-    email = request.form.get("email", "").strip()
-    phone = request.form.get("phone", "").strip()
-    address = request.form.get("address", "").strip()
-    services = request.form.get("subject", "").strip()
-    message = request.form.get("message", "").strip()
+    try:
+        name = request.form.get("name", "").strip()
+        email = request.form.get("email", "").strip()
+        phone = request.form.get("phone", "").strip()
+        address = request.form.get("address", "").strip()
+        services = request.form.get("subject", "").strip()
+        message = request.form.get("message", "").strip()
 
-    if not name:
-        return render_template("index.html",
+        if not name:
+            ctx = common_ctx()
+            ctx.update({
+                "services": SERVICES,
+                "tagline": COMPANY_TAGLINE,
+                "location": COMPANY_LOCATION,
+                "story": COMPANY_STORY,
+                "email": COMPANY_EMAIL,
+                "description": COMPANY_DESCRIPTION,
+                "error": "Please provide your name.",
+            })
+            return render_template("index.html", **ctx)
+
+        add_lead(
+            name=name,
+            email=email,
+            phone=phone,
+            address=address,
+            source="landing_page",
+            notes=message,
+            services=services,
+        )
+
+        return render_template("thank_you.html",
                                company_name=COMPANY_NAME,
-                               services=SERVICES,
-                               error="Please provide your name.")
-
-    add_lead(
-        name=name,
-        email=email,
-        phone=phone,
-        address=address,
-        source="landing_page",
-        notes=message,
-        services=services,
-    )
-
-    return render_template("thank_you.html",
-                           company_name=COMPANY_NAME,
-                           name=name)
+                               name=name)
+    except Exception as e:
+        logging.error(f"Error saving lead: {e}")
+        return render_template("thank_you.html",
+                               company_name=COMPANY_NAME,
+                               name=request.form.get("name", "there"))
 
 
 # === Blog ===
