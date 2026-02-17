@@ -171,9 +171,17 @@ SERVICE_PAGES = [
         "hero_image": "/static/images/portfolio/fb-sod-front-yard-stepping.jpg",
         "gallery_images": [
             "/static/images/portfolio/fb-backyard-sod-riverrock.jpg",
+            "/static/images/portfolio/fb-sod-frontyard-truck.jpg",
+            "/static/images/portfolio/fb-sod-stonehouse-backyard.jpg",
+            "/static/images/portfolio/fb-sod-stonehouse-front.jpg",
+            "/static/images/portfolio/fb-sod-frontyard-mulchbeds.jpg",
         ],
         "gallery_alt": [
             "Backyard sod installation with river rock bed and tree rings in New Braunfels TX",
+            "Fresh sod installation on front yard with work truck in New Braunfels TX — Brewer Lawn Designs",
+            "Green sod lawn at stone house backyard in New Braunfels TX — Brewer Lawn Designs",
+            "Stone house front yard with lush sod lawn and large oak trees — Brewer Lawn Designs",
+            "Front yard sod installation with mulch beds and tree ring in New Braunfels TX — Brewer Lawn Designs",
         ],
         "content": """
             <h2>Sod Installation in New Braunfels, TX</h2>
