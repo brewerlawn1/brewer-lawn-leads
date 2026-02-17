@@ -20,11 +20,13 @@ SERVICE_PAGES = [
         "hero_image": "/static/images/portfolio/fb-front-yard-landscape.jpg",
         "gallery_images": [
             "/static/images/portfolio/yelp-finished-1.jpg",
+            "/static/images/portfolio/yelp-finished-2.jpg",
             "/static/images/portfolio/yelp-mid-job-1.jpg",
             "/static/images/portfolio/yelp-mid-job-2.jpg",
         ],
         "gallery_alt": [
             "Completed residential landscape with black rock and boulders by Brewer Lawn Designs in New Braunfels TX",
+            "Black rock bed with boulders and agave at stone home in New Braunfels TX — Brewer Lawn Designs",
             "Crew installing plants and shrubs at New Braunfels home — Brewer Lawn Designs",
             "Landscape fabric and boulder placement in progress by Brewer Lawn Designs crew",
         ],
@@ -170,12 +172,12 @@ SERVICE_PAGES = [
         "gallery_images": [
             "/static/images/portfolio/fb-sod-stepping-path.jpg",
             "/static/images/portfolio/fb-backyard-sod-riverrock.jpg",
-            "/static/images/portfolio/yelp-lawn-mow-3.jpg",
+            "/static/images/portfolio/fb-backyard-sod-gardens.jpg",
         ],
         "gallery_alt": [
             "Fresh sod with flagstone stepping path at New Braunfels home — Brewer Lawn Designs",
             "Backyard sod installation with river rock bed and tree rings in New Braunfels TX",
-            "Established green lawn from sod installation by Brewer Lawn Designs in New Braunfels",
+            "Backyard sod installation with garden beds and landscape lighting in New Braunfels TX",
         ],
         "content": """
             <h2>Sod Installation in New Braunfels, TX</h2>
@@ -210,12 +212,12 @@ SERVICE_PAGES = [
         "h1": "Artificial Turf Installation in New Braunfels",
         "meta_description": "Professional artificial turf installation in New Braunfels, TX. Low-maintenance, drought-proof lawns, pet areas, putting greens. Call Brewer Lawn Designs for a quote.",
         "tagline": "Low-maintenance, drought-proof artificial grass solutions",
-        "hero_image": "/static/images/portfolio/yelp-finished-2.jpg",
+        "hero_image": "/static/images/portfolio/yelp-lawn-mow-4.jpg",
         "gallery_images": [
-            "/static/images/portfolio/yelp-lawn-mow-4.jpg",
+            "/static/images/portfolio/yelp-lawn-mow-3.jpg",
         ],
         "gallery_alt": [
-            "Manicured lawn and edging by Brewer Lawn Designs in New Braunfels TX",
+            "Lush green turf lawn under shade trees at New Braunfels property — Brewer Lawn Designs",
         ],
         "content": """
             <h2>Artificial Turf Installation in New Braunfels, TX</h2>
@@ -300,12 +302,10 @@ SERVICE_PAGES = [
         "tagline": "Beautiful, sustainable garden design for Texas homes",
         "hero_image": "/static/images/portfolio/fb-black-rock-flowers.jpg",
         "gallery_images": [
-            "/static/images/portfolio/fb-backyard-sod-gardens.jpg",
             "/static/images/portfolio/yelp-weed-pull-1.jpg",
             "/static/images/portfolio/yelp-weed-pull-4.jpg",
         ],
         "gallery_alt": [
-            "Backyard garden beds with sod and landscape lighting by Brewer Lawn Designs in New Braunfels",
             "Foundation garden bed with ornamental grasses and lantana in New Braunfels TX",
             "Freshly planted garden bed with firebush and shrubs by Brewer Lawn Designs",
         ],
@@ -445,10 +445,14 @@ SERVICE_PAGES = [
         "gallery_images": [
             "/static/images/portfolio/yelp-commercial-2.jpg",
             "/static/images/portfolio/yelp-commercial-lawn.jpg",
+            "/static/images/portfolio/fb-commercial-hyundai-sign.jpg",
+            "/static/images/portfolio/fb-commercial-hyundai-grounds.jpg",
         ],
         "gallery_alt": [
             "Commercial grounds crew trimming overgrowth at New Braunfels business property",
             "Freshly mowed commercial property lawn by Brewer Lawn Designs in New Braunfels TX",
+            "Brewer Lawn Designs commercial landscaping at Hyundai dealership in New Braunfels TX",
+            "Commercial grounds maintenance at Hyundai dealership by Brewer Lawn Designs",
         ],
         "content": """
             <h2>Commercial Landscaping in New Braunfels, TX</h2>
